@@ -7,6 +7,19 @@ import http
 # Create your views here.
 def item_list(request):
     return render(request, "index1.html") 
+
+def gaming(request):
+    return render(request, 'gaming.html')
+
+def decoding(request):
+    return render(request, 'decoding.html')
+
+def thinkathon(request):
+    return render(request, 'thinkathon.html')
+
+def team(request):
+    return render(request, 'team.html')
+    
 hint = ['HINT 1: This is the first clue;', 'HINT 2: This is the second clue;', 'HINT 3: This is the third clue']
 def homemail(request):
     if(request.method == "POST"):
@@ -17,6 +30,8 @@ def homemail(request):
         send_mail("Website Contact Form:  " + name, "You have received a new message from your website contact form.\n\n"+"Here are the details:\n\nName: "+ name +"\n\nEmail: " + email + "\n\nPhone: "+ phone+ "\n\nMessage:\n"+ message, email, ['dps.it.council@gmail.com'], fail_silently=False)
         return HttpResponseRedirect("/home")
 
+def main(request):
+    return render('index.html')
 def submail(request):
     if request.method == "POST":
         email = request.POST.get('email')

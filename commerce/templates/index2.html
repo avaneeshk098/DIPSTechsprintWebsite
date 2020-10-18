@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>TechSprint-IT COUNCIL</title>
+        <title>Techsprint - Home</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -20,6 +20,12 @@
         <link href="{% static 'css/styles1.css' %}" rel="stylesheet" />
         
     </head>
+    <style>
+        .event-link:hover{
+            text-decoration: none;
+            background-color: #64a19d;
+        }
+    </style>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
@@ -28,9 +34,10 @@
                 
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/home" style="color: #39ff14;">IT COUNCIL</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/" style="color: #39ff14;">IT COUNCIL</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" style="color: #39ff14;">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects" style="color: #39ff14;">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects" style="color: #39ff14;">Events</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/techsprint/team" style="color: #39ff14;">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup" style="color: #39ff14;"   >Contact</a></li>
                     </ul>
                 </div>
@@ -68,12 +75,14 @@
                 <!-- Featured Project Row-->
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'assets/img/tech.jpg' %}" alt="" /></div>
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4><a href="/challenge">Think-a-thon</a></h4>
-                            <p class="text-black-50 mb-0">Nobody is perfect but we can aspire to be by improving ourselves everyday, similarly technology isn't perfect, so do you think you can improve it? Its time to show off your futuristic minds and solutions.</p>
+                    <a href="/techsprint/thinkathon"  class="col-xl-4 col-lg-5 event-link">  
+                        <div class="pt-5 pb-5">
+                            <div class="featured-text text-center text-lg-left">
+                                <h4>Think-a-thon</h4>
+                                <p class="text-black-50 mb-0">Nobody is perfect but we can aspire to be by improving ourselves everyday, similarly technology isn't perfect, so do you think you can improve it? Its time to show off your futuristic minds and solutions.</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <!-- Project One Row-->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0 ">
@@ -82,11 +91,13 @@
                     <div class="col-lg-6 ">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">404 Imposter Not Found</h4>
-                                    <p class="mb-0 text-white-50"> Everyone has a sherlock in them, this is pretty much a virtual treasure hunt, a chunk of computer and programming knowledge involved. Lets see if you can get through our virtual road (we are sure you won't) prerequisites: a very high level of curiosity.</p>
-                                    <hr class="d-none d-lg-block mb-0 ml-0" />
-                                </div>
+                                <a href="/techsprint/decoding" class="event-link">
+                                    <div class="project-text w-100 my-auto text-center text-lg-left">
+                                        <h4 class="text-white">404 Imposter Not Found</h4>
+                                        <p class="mb-0 text-white-50"> Everyone has a sherlock in them, this is pretty much a virtual treasure hunt, a chunk of computer and programming knowledge involved. Lets see if you can get through our virtual road (we are sure you won't) prerequisites: a very high level of curiosity.</p>
+                                        <hr class="d-none d-lg-block mb-0 ml-0" />
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -97,11 +108,13 @@
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <li><a href="/hints" style="--i: 0.1s;"></a><h4 class="text-white">FPS</h4></a></li>
-                                    <p class="mb-0 text-white-50">Esports is growing at an exponential rate, and we surely don't want to lag behind in this spectra, everybody hates lag and thus, we are really excited to bring you the one and only FPS, our school's first gaming tournament. Think you are OP? Let's see.</p>
-                                    <hr class="d-none d-lg-block mb-0 mr-0" />
-                                </div>
+                                <a href="/techsprint/fps" class="event-link">
+                                    <div class="project-text w-100 my-auto text-center text-lg-right">
+                                        <li><h4 class="text-white">FPS</h4></li>
+                                        <p class="mb-0 text-white-50">Esports is growing at an exponential rate, and we surely don't want to lag behind in this spectra, everybody hates lag and thus, we are really excited to bring you the one and only FPS, our school's first gaming tournament. Think you are OP? Let's see.</p>
+                                        <hr class="d-none d-lg-block mb-0 mr-0" />
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -160,7 +173,6 @@
                 </div>
                 <div class="social d-flex justify-content-center">
                     <a class="mx-2" href="#!"><i class="fab fa-instagram"></i></a>
-                    
                 </div>
             </div>
         </section>

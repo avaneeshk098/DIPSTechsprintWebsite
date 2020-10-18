@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Techsprint - Gaming</title>
+    <link rel="stylesheet" href="{% static 'gaming/bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="{% static 'gaming/css/Doctor%20Glitch.css'%}">
+    <link rel="stylesheet" href="{% static 'gaming/css/Gameplay.css'%}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'gaming/fonts/fontawesome5-overrides.min.css'%}">
+</head>
+<style>
+    @font-face {
+	    font-family: Doctor Glitch;
+	    src: url({% static 'gaming/fonts/DoctorGlitch.woff2' %}) format('woff2'),
+	    url({% static 'gaming/fonts/DoctorGlitch.woff' %}) format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+    }
+
+    @font-face {
+	    font-family: 'Gameplay';
+	    src: url({% static 'gaming/fonts/Gameplay.woff2' %}) format('woff2'),
+	    url({% static 'gaming/fonts/Gameplay.woff' %}) format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+    }
+</style>
+<body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+        <div class="container"><a class="navbar-brand text-uppercase" href="/techsprint" style="font-family: Montserrat, sans-serif;color: rgb(255,255,255);"><strong>tech</strong><span style="color: rgb(0,252,25);"><strong><em>SPRINT</em></strong></span></a><button data-toggle="collapse"
+                data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div
+                class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">GAMES</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">REGISTER</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background: url(&quot;{% static 'gaming/img/pexels-yurii-hlei-1365795.jpg'%}&quot;) center / cover;">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"><span style="font-family: 'Doctor Glitch';">Welcome To Techsprint</span></div>
+                <div class="intro-heading text-uppercase" style="text-align: center;"><span style="font-family: 'Doctor Glitch';letter-spacing: 16px;text-align: center;">FPS</span></div><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" role="button" href="#contact">register now!</a></div>
+        </div>
+    </header>
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="font-family: Gameplay;letter-spacing: 3px;">ABOUT THE EVENT</h2>
+                    <h3 class="text-muted section-subheading"></h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fas fa-user-friends fa-stack-1x fa-inverse"></i></span>
+                    <h4 class="section-heading" style="font-family: Montserrat, sans-serif;">Register</h4>
+                    <p class="text-muted">Fill the form at the bottom of this website to register your team for the event.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                </div>
+                <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-gamepad fa-stack-1x fa-inverse"></i></span>
+                    <h4 class="section-heading" style="font-family: Montserrat, sans-serif;">Compete</h4>
+                    <p class="text-muted">Compete against skilled competitors in a fiery gaming competition to emerge victorious.</p>
+                </div>
+                <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="far fa-grin-alt fa-stack-1x fa-inverse"></i></span>
+                    <h4 class="section-heading">Enjoy</h4>
+                    <p class="text-muted">Finally, enjoy the tournament to the fullest and improve your gaming skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading" style="font-family: Gameplay;letter-spacing: 5px;">GAMES</h2>
+                    <h3 class="section-subheading text-muted">Find the games which will be played in the tournament</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 portfolio-item">
+                    <a class="portfolio-link" target="blank" href="https://www.minecraft.net/en-us">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-link fa-3x"></i></div>
+                        </div><img class="img-fluid" src="{% static 'gaming/img/121140.png'%}"></a>
+                    <div class="portfolio-caption">
+                        <h4>Minecraft</h4>
+                        <p class="text-muted"><br /><strong>Minecraft</strong> is a Lego style adventure game. The video game puts players in a randomly-generated world where they can create their own structures and contraptions out of textured cubes.<br /><br /></p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 portfolio-item">
+                    <a class="portfolio-link" target="blank" href="https://www.callofduty.com/mobile">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-link fa-3x"></i></div>
+                        </div><img class="img-fluid" src="{% static 'gaming/img/call-of-duty-mobile-50-1536x864.jpg'%}"></a>
+                    <div class="portfolio-caption">
+                        <h4>COD Mobile</h4>
+                        <p class="text-muted"><br /><strong>Call of Duty</strong>: <strong>Mobile</strong> is a mobile version of <strong>CoD.</strong> It has all of the core <strong>CoD</strong> components you&#39;d expect these days, including fast-paced multiplayer, zombies, and battle royale.<br
+    /><br /></p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 portfolio-item">
+                    <a class="portfolio-link" target="blank" href="https://playvalorant.com/en-us/">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fa fa-link fa-3x"></i></div>
+                        </div><img class="img-fluid" src="{% static 'gaming/img/wp6012294-valorant-wallpapers.jpg'%}"></a>
+                    <div class="portfolio-caption">
+                        <h4>Valorant</h4>
+                        <p class="text-muted"><br /><strong>Valorant </strong>is a tactical shooter and first-person shooter set in the near-future. Players play as one of a set of agents, <strong>characters</strong>  designed based on several countries and cultures around the world.<br /><br /></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="col" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background-image:url({% static 'gaming/img/map-image.png' %});">
+            <h1 style="text-align: center;font-family: Gameplay;color: rgb(255,255,255);letter-spacing: 8px;">REGISTER</h1>
+            <h3 class="text-center section-subheading text-muted">Ready to compete in the tournament!</h3>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehwbffGxcYDKv_4kq92SgasD9wfJk5rZdcQNy19lGsD8blxw/viewform?embedded=true" width="540" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Techsprint 2020</span></div>
+                <div class="col-md-3">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item"><a href="https://www.instagram.com/dipstechsprint/"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <span class="copyright">Made at <i class="fas fa-home"></i> by Avaneesh Kumar and Narayan S</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'gaming/js/agency.js'%}"></script>
+</body>
+
+</html>
