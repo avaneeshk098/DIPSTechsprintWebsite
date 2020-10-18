@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DPS IT COUNCIL</title>
-    <link rel="stylesheet" href="static/hints.css">
+    <link rel="stylesheet" href="{% static 'hints.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script type="text/javascript">
@@ -79,7 +80,7 @@
                                 var diff = Math.round((now - d) / (60 * 1000));
                                 if (diff < 40 && hint_ctr != 3) {
                                     $.ajax({
-                                        url: `/hints/${hint_ctr}`,
+                                        url: `/techsprint/decoding_challenge/hints/${hint_ctr}`,
                                         type: 'POST',
                                         data: {
                                             id: 0,
@@ -142,12 +143,12 @@
     </div>
     <div class="links">
         <ul>
-            <li><a href="/" style="--i: 0.1s;">Home</a></li>
-            <li><a href="/challenge" style="--i: 0.05s;">Challenge</a></li>
-            <li><a href="/acknowledgement" style="--i: 0.15s;">Acknowledgements</a></li>
-            <li><a href="/scoreboard" style="--i: 0.15s;">Scoreboard</a></li>
+            <li><a href="/techsprint/decoding_challenge/home" style="--i: 0.1s;">Home</a></li>
+            <li><a href="/techsprint/decoding_challenge/challenge" style="--i: 0.05s;">Challenge</a></li>
+            <li><a href="/techsprint/decoding_challenge/acknowledgement" style="--i: 0.15s;">Acknowledgements</a></li>
+            <li><a href="/techsprint/decoding_challenge/scoreboard" style="--i: 0.15s;">Scoreboard</a></li>
         </ul>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="static/app.js"></script>
+<script src="{% static 'app.js' %}"></script>

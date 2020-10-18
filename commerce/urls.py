@@ -11,7 +11,7 @@ urlpatterns = [
     path('techsprint/thinkathon', views.thinkathon),
     path('techsprint/decoding', views.decoding),
     path('techsprint/team', views.team),
-    path('techsprint/decoding_challenge/home', views.main),
+    path('techsprint/decoding_challenge/home', views.index),
     path('techsprint/decoding_challenge/hints', views.hints),
     path('techsprint/decoding_challenge/challenge', views.challenge),
     path('techsprint/decoding_challenge/acknowledgement', views.acknowledge),

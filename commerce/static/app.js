@@ -1,7 +1,8 @@
-const container = document.querySelector(".container");
-
-$(".hamburger_menu").click(()=>{
-  container.classList.toggle("active");
+$(document).ready(() => {
+  const container = document.querySelector(".container");
+  $(".hamburger-menu").click(()=>{
+    container.classList.toggle("active");
+  })
 })
 
 

@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DPS IT COUNCIL</title>
-    <link rel="stylesheet" href="static/ack.css">
+    <link rel="stylesheet" href="{% static 'ack.css' %}">
     <script type="text/javascript">
         window.onload = function() {
             document.addEventListener("contextmenu", function(e) {
@@ -59,7 +60,7 @@
         <div class="main">
             <header>
                 <div class="overlay">
-                    <div class="inner"><img src="static/download.jpg">
+                    <div class="inner"><img src="{% static 'download.jpg' %}">
                         <h2 class="title">THANK YOU!</h2><br>
                         <p>Jobless dude1: Siddhant Joshi<br> Jobless dude2: kushurox<br> Ideas and steganography: Amog<br> -------------------------------------------- Teachers: Vasudha Maam - Computers Teacher Senior mistress name:xyz<br> principal</p>
                     </div>
@@ -71,11 +72,12 @@
     </div>
     <div class="links">
         <ul>
-            <li><a href="/" style="--i: 0.1s;">Home</a></li>
-            <li><a href="/hints" style="--i: 0.1s;">Hints</a></li>
-            <li><a href="/challenge" style="--i: 0.05s;">Challenge</a></li>
-            <li><a href="/scoreboard" style="--i: 0.15s;">Scoreboard</a></li>
+            <li><a href="/techsprint/decoding_challenge/home" style="--i: 0.1s;">Home</a></li>
+            <li><a href="/techsprint/decoding_challenge/hints" style="--i: 0.1s;">Hints</a></li>
+            <li><a href="/techsprint/decoding_challenge/challenge" style="--i: 0.05s;">Challenge</a></li>
+            <li><a href="/techsprint/decoding_challenge/scoreboard" style="--i: 0.15s;">Scoreboard</a></li>
         </ul>
     </div>
 </div>
-<script src="static/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{% static 'app.js' %}"></script>
