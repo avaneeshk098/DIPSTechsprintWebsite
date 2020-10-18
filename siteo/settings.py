@@ -118,8 +118,8 @@ USE_L10N = True
 USE_TZ = True
 
 EMAIL_HOST      = 'smtp.gmail.com'
-EMAIL_HOST_PASSWORD = 'rit-12345'
-EMAIL_HOST_USER = 'avaneeshk098@gmail.com'
+EMAIL_HOST_PASSWORD = 'ItCouncilDps'
+EMAIL_HOST_USER = 'dps.it.council@gmail.com'
 EMAIL_PORT      = 587
 EMAIL_USE_TLS   = True
 
