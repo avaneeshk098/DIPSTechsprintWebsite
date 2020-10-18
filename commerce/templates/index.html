@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPS IT COUNCIL</title>
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <script type="text/javascript">
+        window.onload = function() {
+            document.addEventListener("contextmenu", function(e) {
+                e.preventDefault();
+            }, false);
+            document.addEventListener("keydown", function(e) {
+                //document.onkeydown = function(e) {
+                // "I" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                    disabledEvent(e);
+                }
+                // "J" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                    disabledEvent(e);
+                }
+                // "S" key + macOS
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    disabledEvent(e);
+                }
+                // "U" key
+                if (e.ctrlKey && e.keyCode == 85) {
+                    disabledEvent(e);
+                }
+                // "F12" key
+                if (event.keyCode == 123) {
+                    disabledEvent(e);
+                }
+            }, false);
+
+            function disabledEvent(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else if (window.event) {
+                    window.event.cancelBubble = true;
+                }
+                e.preventDefault();
+                return false;
+            }
+        }
+    </script>
+</head>
+<div class="container">
+    <div class="navbar">
+        <div class="menu">
+            <h2 class="logo">DIPSITE TECHRUN</h2>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main">
+            <header>
+                <div class="overlay">
+                    <div class="inner">
+                        <h2 class="title">TECHRUN!</h2><br><br>
+                        <p>We welcome you to the first techrun held by the dpss IT council.This is the decoding challenge.We hope you do well! You would find the things we planned for you when you open the navbar.</p><br><a href="/scoreboard"><button class="btn">ScoreBoard</button></a><br><br>
+                        <h3>RULES:<br></h3>
+                        <p>1.DUMMY TEXTEDSJFCEI<br> 2.DUMMY TEXTEDSJFCEI<br> 3.DUMMY TEXTEDSJFCEI<br></p>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="shadow one"></div>
+        <div class="shadow two"></div>
+    </div>
+    <div class="links">
+        <ul>
+            <li><a href="/hints" style="--i: 0.1s;">Hints</a></li>
+            <li><a href="/challenge" style="--i: 0.05s;">Challenge</a></li>
+            <li><a href="/acknowledgement" style="--i: 0.15s;">Acknowledgements</a></li>
+            <li><a href="/scoreboard" style="--i: 0.15s;">Scoreboard</a></li>
+        </ul>
+    </div>
+</div>
+<script src="{% static 'app.js'%}"></script>

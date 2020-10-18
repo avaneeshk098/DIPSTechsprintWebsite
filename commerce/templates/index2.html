@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="{% static 'my.js'%}"></script>
+    
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TechSprint-IT COUNCIL</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles1.css' %}" rel="stylesheet" />
+        
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger navbar-fixed-top  " href="#page-top" id="head"><b>Tech<i style="color: #39ff14;">Sprint</i><b></a>
+                
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/home" style="color: #39ff14;">IT COUNCIL</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" style="color: #39ff14;">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects" style="color: #39ff14;">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup" style="color: #39ff14;"   >Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container d-flex h-100 align-items-center" id="fist">
+                <div class="mx-auto text-center">
+                      
+                    <h1 class="mx-auto my-0 text-uppercase js-change" >Tech<i style="color: #39ff14;">Sprint</i></h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Hello Tech!</h2>
+                    <a class="btn btn-primary js-scroll-trigger" href="#about">Get Started</a>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">What is TechSprint?</h2>
+                        <p class="text-white-50">
+                            In a world where Technology is ingrained in almost all aspects of life, we at
+                            <a href="http://south.dpsbangalore.edu.in/">DPSS</a>
+                            bring to you our First Ever Techfest-TechSprint.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container">
+                <!-- Featured Project Row-->
+                <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'assets/img/tech.jpg' %}" alt="" /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4><a href="/challenge">Think-a-thon</a></h4>
+                            <p class="text-black-50 mb-0">Nobody is perfect but we can aspire to be by improving ourselves everyday, similarly technology isn't perfect, so do you think you can improve it? Its time to show off your futuristic minds and solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0 ">
+                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/codee.jpg' %}" alt="" /></div>
+                    
+                    <div class="col-lg-6 ">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">404 Imposter Not Found</h4>
+                                    <p class="mb-0 text-white-50"> Everyone has a sherlock in them, this is pretty much a virtual treasure hunt, a chunk of computer and programming knowledge involved. Lets see if you can get through our virtual road (we are sure you won't) prerequisites: a very high level of curiosity.</p>
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row justify-content-center links no-gutters">
+                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/gam.jpg' %}" alt="" /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <li><a href="/hints" style="--i: 0.1s;"></a><h4 class="text-white">FPS</h4></a></li>
+                                    <p class="mb-0 text-white-50">Esports is growing at an exponential rate, and we surely don't want to lag behind in this spectra, everybody hates lag and thus, we are really excited to bring you the one and only FPS, our school's first gaming tournament. Think you are OP? Let's see.</p>
+                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                        <form class="form-inline d-flex" id="signup-form">
+                            <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" required="required" data-validation-required-message="Please enter your email address." id="inputEmail" type="email" placeholder="Enter email address..." />
+                            <button class="btn btn-primary mx-auto" type="submit" id="sub-button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container">
+                <div class="row">   
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50">DPS Bangalore South<br>11th KM, Bikaspura Main Road,<br> Kanakpura Road</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50"><a href="#!">dps.it.council@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Contact</h4>
+                                <hr class="my-4" />
+                                <div class="small text-black-50 left" ><b style="color: black">Ekanshh Praveen:</b><br><b style="color: black">Phone:</b> +91 82178 61039<br><b style="color: black">Email:</b> ekanshh.praveen3@gmail.com<br><b style="color: black">OR</b><br><b style="color: black">Rohit Bharadwaj:</b><br><b style="color: black">Phone:</b> +91 88796 29180<br><b style="color: black">Email:</b> r.rohit.bharadwaj03@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container text-white-50">Made at <i class="fa fa-home"></i> By Avaneesh Kumar and Narayan.S<br>Copyright © TechSprint 2020</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts1.js' %}"></script>
+        <script src="{% static 'app.js'%}"></script>
+    </body>
+</html>

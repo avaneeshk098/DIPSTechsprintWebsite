@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPS IT COUNCIL</title>
+    <link rel="stylesheet" href="static/scoreboard.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            document.addEventListener("contextmenu", function(e) {
+                e.preventDefault();
+            }, false);
+            document.addEventListener("keydown", function(e) {
+                //document.onkeydown = function(e) {
+                // "I" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                    disabledEvent(e);
+                }
+                // "J" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                    disabledEvent(e);
+                }
+                // "S" key + macOS
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    disabledEvent(e);
+                }
+                // "U" key
+                if (e.ctrlKey && e.keyCode == 85) {
+                    disabledEvent(e);
+                }
+                // "F12" key
+                if (event.keyCode == 123) {
+                    disabledEvent(e);
+                }
+            }, false);
+
+            function disabledEvent(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else if (window.event) {
+                    window.event.cancelBubble = true;
+                }
+                e.preventDefault();
+                return false;
+            }
+        }
+    </script>
+</head>
+<div class="container">
+    <div class="navbar">
+        <div class="menu">
+            <h3 class="logo">Scoreboard</h3>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main">
+            <header>
+                <div class="overlay">
+                    <div class="inner">
+                        <h1>THESE ARE THE FINAL SCORES AND RANKS.</h1>
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>Rank:</th>
+                                    <th>Name:</th>
+                                    <th>Time:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>abc</td>
+                                    <td>80</td>
+                                </tr>
+                                <tr class="active-row">
+                                    <td>2</td>
+                                    <td>xyz</td>
+                                    <td>92</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>john doe</td>
+                                    <td>99</td>
+                                </tr>
+                                <tr class="active-row">
+                                    <td>2</td>
+                                    <td>xyz</td>
+                                    <td>92</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>THANK YOU AND CONGRATULATIONS!<br>HOPE YOU ENJOYED.</h3>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="shadow one"></div>
+        <div class="shadow two"></div>
+    </div>
+    <div class="links">
+        <ul>
+            <li><a href="/" style="--i: 0.1s;">Home</a></li>
+            <li><a href="/hints" style="--i: 0.1s;">Hints</a></li>
+            <li><a href="/challenge" style="--i: 0.05s;">Challenge</a></li>
+            <li><a href="/acknowledgement" style="--i: 0.15s;">Acknowledgements</a></li>
+        </ul>
+    </div>
+</div>
+<script src="static/app.js"></script>

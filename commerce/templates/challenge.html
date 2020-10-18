@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPS IT COUNCIL</title>
+    <link rel="stylesheet" href="static/challenge.css">
+    <script type="text/javascript">
+        window.onload = function() {
+            document.addEventListener("contextmenu", function(e) {
+                e.preventDefault();
+            }, false);
+            document.addEventListener("keydown", function(e) {
+                //document.onkeydown = function(e) {
+                // "I" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+                    disabledEvent(e);
+                }
+                // "J" key
+                if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+                    disabledEvent(e);
+                }
+                // "S" key + macOS
+                if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                    disabledEvent(e);
+                }
+                // "U" key
+                if (e.ctrlKey && e.keyCode == 85) {
+                    disabledEvent(e);
+                }
+                // "F12" key
+                if (event.keyCode == 123) {
+                    disabledEvent(e);
+                }
+            }, false);
+
+            function disabledEvent(e) {
+                if (e.stopPropagation) {
+                    e.stopPropagation();
+                } else if (window.event) {
+                    window.event.cancelBubble = true;
+                }
+                e.preventDefault();
+                return false;
+            }
+        }
+    </script>
+</head>
+<div class="container">
+    <div class="navbar">
+        <div class="menu">
+            <h3 class="logo">Challenge</h3>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main">
+            <header>
+                <div class="overlay">
+                    <div class="inner">
+                        <p>Hello guys! Congratulations on clearing the first challenge.Now we are going to give you a set of chellenges and hope you guys will complete it soon<br><br> The Following are the next challenges:<br><br> [1]<a href="static/secret.mp3"
+                                download="secret.mp3"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your first challenge file</button></a><br><br> [2]<a href="static/decrypt.txt" download="secret.txt"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your second challenge file</button></a><br><br><br>                            NOTE: Hints will be given on the hints page every 5 minutes.</p>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="shadow one"></div>
+        <div class="shadow two"></div>
+    </div>
+    <div class="links">
+        <ul>
+            <li><a href="/" style="--i: 0.1s;">Home</a></li>
+            <li><a href="/hints" style="--i: 0.1s;">Hints</a></li>
+            <li><a href="/acknowledgement" style="--i: 0.15s;">Acknowledgements</a></li>
+            <li><a href="/scoreboard" style="--i: 0.15s;">Scoreboard</a></li>
+        </ul>
+    </div>
+</div>
+<script src="static/app.js"></script>
