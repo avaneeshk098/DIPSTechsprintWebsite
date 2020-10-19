@@ -38,8 +38,9 @@ def submail(request):
         
 def TechSprint(request):
     return render(request, 'index2.html')
+    
 def index(request):
-    if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
+    if (datetime.date(2020, 11,13) - datetime.date.today()).days <= 0:
         response = render(request, 'index.html')
         response.set_cookie("arestedkjkhfdiiens", datetime.datetime.now())
     else:
@@ -47,16 +48,32 @@ def index(request):
     return response
 
 def hints(request):
-    return render(request, 'hints.html')
+    if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
+        response = render(request, 'hints.html')
+    else:
+        response = HttpResponse('This page is not accessible at the momment.')
+    return response
 
 def challenge(request):
-    return render(request, 'challenge.html')
+    if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
+        response = render(request, 'challenge.html')
+    else:
+        response = HttpResponse('This page is not accessible at the momment.')
+    return response
 
 def acknowledge(request):
-    return render(request, 'acknowledge.html')
+    if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
+        response = render(request, 'acknowledge.html')
+    else:
+        response = HttpResponse('This page is not accessible at the momment.')
+    return response
 
 def scoreboard(request):
-    return render(request, 'scoreboard.html')
+    if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
+        response = render(request, 'scoreboard.html')
+    else:
+        response = HttpResponse('This page is not accessible at the momment.')
+    return response
 
 def hints_post(request, id):
     if(request.method == "POST"):

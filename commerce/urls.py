@@ -1,7 +1,7 @@
 from django.urls import path
 from commerce import views
 from .views import item_list
-
+from django.views.generic import RedirectView
 app_name = 'commerce'
 urlpatterns = [
     path('',item_list,name='item_list'),

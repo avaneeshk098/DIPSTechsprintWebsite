@@ -9,7 +9,7 @@
         <meta name="author" content="" />
         <title>IT Council-DPSS</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/ic.ico' %}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -27,7 +27,7 @@
                 
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Tech<i style="color:lime">Sprint</i></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/techsprint">Tech<i style="color:lime">Sprint</i></a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li> 
                 </div>
@@ -57,14 +57,7 @@
         <section class="masthead bg-primary text-white text-center" id="portfolio">
             <div class="container d-flex flex-colum">
                 <!-- Portfolio Section Heading-->
-                <h2 class="masthead-heading text-uppercase mb-0" style="color:white">Tech<i style="color:chartreuse">Sprint</i>-<h2 class="masthead-heading text-uppercase mb-0" style="color:white">2020<br><br></h2></h2>
-                
-                
-                <div class="video-container">
-                    <video autoplay muted loop >
-                        <source src="{% static 'video.mp4'%}" type="video/mp4">
-                   </video>
-                </div>
+                <h2 class="masthead-heading text-uppercase mb-0" style="color:white">Tech<i style="color:chartreuse">Sprint</i>-<h2 class="masthead-heading text-uppercase mb-0" style="color:white">2020 Events:<br><br></h2></h2>
                 
                 <!-- Icon Divider-->
                 
@@ -146,9 +139,9 @@
         <section class="masthead bg-primary text-white text-center" id="contact">
             <div class="container d-flex  flex-column">
                 <!-- Contact Section Heading-->
-                <h3 class="masthead-heading text-uppercase mb-0">Contact us</h3>
+                <h3 class="masthead-heading text-uppercase mb-0">Contact us<br/><br/></h3>
                 <div>
-                    <video autoplay muted loop id=myVideo >
+                    <video autoplay muted loop id='myVideo' >
                         <source src="{% static 'video.mp4'%}" type="video/mp4">
                    </video>
                 </div>
@@ -231,7 +224,7 @@
         </footer>
         <!-- Copyright Section-->
         <div class="legend">
-            <div class='container'><small>Made at <i class="fa fa-home"></i> By Avaneesh Kumar and Narayan.S<br>Copyright © IT COUNCIL DPSS 2020</small></div>
+            <div class='container'><small>Made from <i class="fa fa-home"></i> by Avaneesh Kumar and Narayan Sreekumar and Pavel<br>Copyright © IT COUNCIL DPSS 2020</small></div>
         </div>
         <div class="copyright py-4 text-center text-white">
             <div class="container"><small>Copyright © IT COUNCIL DPSS 2020</small></div>

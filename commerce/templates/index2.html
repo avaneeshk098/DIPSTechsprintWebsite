@@ -10,7 +10,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Techsprint - Home</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/ts.ico' %}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -18,7 +18,6 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'css/styles1.css' %}" rel="stylesheet" />
-        
     </head>
     <style>
         .event-link:hover{
@@ -74,47 +73,204 @@
             <div class="container">
                 <!-- Featured Project Row-->
                 <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'assets/img/tech.jpg' %}" alt="" /></div>
-                    <a href="/techsprint/thinkathon"  class="col-xl-4 col-lg-5 event-link">  
-                        <div class="pt-5 pb-5">
-                            <div class="featured-text text-center text-lg-left">
-                                <h4>Think-a-thon</h4>
-                                <p class="text-black-50 mb-0">Nobody is perfect but we can aspire to be by improving ourselves everyday, similarly technology isn't perfect, so do you think you can improve it? Its time to show off your futuristic minds and solutions.</p>
+                    <div class="col-xl-8 col-lg-7">
+                        <style> 
+                            .containera {
+                              position: relative;
+                              width: 100%;
+                              text-align: center;
+                            }
+      
+                            .image {
+                              display: block;
+                              width: 100%;
+                              height: 100%;
+                            }
+      
+                            .overlay {
+                              position: absolute;
+                              top: 0;
+                              bottom: 0;
+                              left: 0;
+                              right: 0;
+                              height: 100%;
+                              width: 100%;
+                              opacity: 0;
+                              transition: .5s ease;
+                             
+                            }
+      
+                            .containera:hover .overlay {
+                              opacity: 1;
+                            }
+      
+                            .text {
+                              color: white;
+                              font-size: 20px;
+                              position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              -webkit-transform: translate(-50%, -50%);
+                              -ms-transform: translate(-50%, -50%);
+                              transform: translate(-50%, -50%);
+                              text-align: center;
+                            }
+                            </style>
+      
+                            <div class="containera">
+                              <img src="{% static 'assets/img/tech.jpg' %}" alt="Avatar" class="image">
+                              <div class="overlay">
+                                <div class="text">
+                                    <a class="btn btn-primary js-scroll-trigger " href="/techsprint/thinkathon#contact">Register!</a>
+                                </div>
+                              </div>
                             </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4><a href="/techsprint/thinkathon">Think-a-thon</a></h4>
+                            <p class="text-black-50 mb-0">Nobody is perfect but we can aspire to be by improving ourselves everyday, similarly technology isn't perfect, so do you think you can improve it? Its time to show off your futuristic minds and solutions.<br><br></p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary js-scroll-trigger" href="/techsprint/thinkathon">Register!</a>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <!-- Project One Row-->
                 <div class="row justify-content-center no-gutters mb-5 mb-lg-0 ">
-                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/codee.jpg' %}" alt="" /></div>
-                    
+                    	                    <div class="col-lg-6">
+                        <style> 
+                            .containerb {
+                              position: relative;
+                              width: 100%;
+                              text-align: center;
+                            }
+      
+                            .image5 {
+                              display: block;
+                              width: 120%;
+                              height: auto;
+                            }
+      
+                            .overlay5 {
+                              position: absolute;
+                              top: 0;
+                              bottom: 0;
+                              left: 0;
+                              right: 10;
+                              height: 100%;
+                              width: 100%;
+                              opacity: 0;
+                              transition: .5s ease;
+                              
+                            }
+      
+                            .containerb:hover .overlay5 {
+                              opacity: 1;
+                            }
+                            
+                            .text {
+                              color: white;
+                              font-size: 20px;
+                              position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              -webkit-transform: translate(-50%, -50%);
+                              -ms-transform: translate(-50%, -50%);
+                              transform: translate(-50%, -50%);
+                              text-align: center;
+                            }
+                            </style>
+      
+                            <div class="containerb">
+                              <img src="{% static 'assets/img/codee.jpg' %}" alt="Avatar" class="image5">
+                              <div class="overlay5">
+                                <div class="text">
+                                    <a class="btn btn-primary js-scroll-trigger " href="/techsprint/decoding#contact">Register!</a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
+                    <!--IT COUNCIL DPSS-->
                     <div class="col-lg-6 ">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <a href="/techsprint/decoding" class="event-link">
-                                    <div class="project-text w-100 my-auto text-center text-lg-left">
-                                        <h4 class="text-white">404 Imposter Not Found</h4>
-                                        <p class="mb-0 text-white-50"> Everyone has a sherlock in them, this is pretty much a virtual treasure hunt, a chunk of computer and programming knowledge involved. Lets see if you can get through our virtual road (we are sure you won't) prerequisites: a very high level of curiosity.</p>
-                                        <hr class="d-none d-lg-block mb-0 ml-0" />
-                                    </div>
-                                </a>
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">404 Imposter Not Found<br></h4>
+                                    <p class="mb-0 text-white-50"> Everyone has a sherlock in them, this is pretty<br>much a virtual treasure hunt, a chunk of computer and programming knowledge involved. Lets see if you can get through our virtual road (we are sure you won't) prerequisites: a very high level of curiosity.<br><br><br></p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-primary js-scroll-trigger" href="/techsprint/decoding">Register!</a>
+                                    
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Project Two Row-->
                 <div class="row justify-content-center links no-gutters">
-                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'assets/img/gam.jpg' %}" alt="" /></div>
+                    <div class="col-lg-6">
+                        <style> 
+                            .containerc {
+                              position: relative;
+                              width: 100%;
+                              text-align: center;
+                              
+                            }
+      
+                            .image6 {
+                              display: block;
+                              width: 100%;
+                              height: auto;
+                            }
+      
+                            .overlay6 {
+                              position: absolute;
+                              top: 0;
+                              bottom: 0;
+                              left: 0;
+                              right: 10;
+                              height: 100%;
+                              width: 100%;
+                              opacity: 0;
+                              transition: .5s ease;
+                              
+                            }
+      
+                            .containerc:hover .overlay6 {
+                              opacity: 1;
+                              
+                            }
+                            
+                            .text {
+                              color: white;
+                              font-size: 20px;
+                              position: absolute;
+                              top: 50%;
+                              left: 50%;
+                              -webkit-transform: translate(-50%, -50%);
+                              -ms-transform: translate(-50%, -50%);
+                              transform: translate(-50%, -50%);
+                              text-align: center;
+                            }
+                            </style>
+      
+                            <div class="containerc">
+                              <img src="{% static 'assets/img/gam.jpg' %}" alt="Avatar" class="image6">
+                              <div class="overlay6">
+                                <div class="text">
+                                    <a class="btn btn-primary js-scroll-trigger " href="/techsprint/fps#contact">Register!</a>
+                                </div>
+                              </div>
+                            </div>
+                    </div>
                     <div class="col-lg-6 order-lg-first">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <a href="/techsprint/fps" class="event-link">
-                                    <div class="project-text w-100 my-auto text-center text-lg-right">
-                                        <li><h4 class="text-white">FPS</h4></li>
-                                        <p class="mb-0 text-white-50">Esports is growing at an exponential rate, and we surely don't want to lag behind in this spectra, everybody hates lag and thus, we are really excited to bring you the one and only FPS, our school's first gaming tournament. Think you are OP? Let's see.</p>
-                                        <hr class="d-none d-lg-block mb-0 mr-0" />
-                                    </div>
-                                </a>
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <li><a href="/hints" style="--i: 0.1s;"></a><h4 class="text-white">FPS</h4></a></li>
+                                    <p class="mb-0 text-white-50">Esports is growing at an exponential rate, and we surely don't want to lag behind in this spectra, everybody hates lag and thus, we are really excited to bring you the one and only FPS, our school's first gaming tournament. Think you are OP? Let's see.<br></p>
+                                    <br>
+                                    <a class="btn btn-primary js-scroll-trigger" href="/techsprint/fps">Register!</a>
+                                   
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,7 +333,7 @@
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container text-white-50">Made at <i class="fa fa-home"></i> By Avaneesh Kumar and Narayan.S<br>Copyright © TechSprint 2020</div></footer>
+        <footer class="footer bg-black small text-center text-white-50"><div class="container text-white-50">Made from <i class="fa fa-home"></i> By Avaneesh Kumar, Narayan Sreekumar and Pavel<br>Copyright © TechSprint 2020</div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
