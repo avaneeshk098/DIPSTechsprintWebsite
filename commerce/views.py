@@ -28,7 +28,7 @@ def homemail(request):
         phone = request.POST.get('phone')
         message = request.POST.get('message')
         send_mail("Website Contact Form:  " + name, "You have received a new message from your website contact form.\n\n"+"Here are the details:\n\nName: "+ name +"\n\nEmail: " + email + "\n\nPhone: "+ phone+ "\n\nMessage:\n"+ message, email, ['dps.it.council@gmail.com'], fail_silently=False)
-        return HttpResponseRedirect("/home")
+        return HttpResponseRedirect("/")
 
 def submail(request):
     if request.method == "POST":

@@ -6220,13 +6220,12 @@ body{
   padding: 20px;
 }
 
+.hoverable:hover{
+  cursor: pointer;
+}
 
 #myVideo {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
 }
 
 @media(max-width:960px){
@@ -6260,7 +6259,7 @@ body{
 }
 
 .video-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0px;
