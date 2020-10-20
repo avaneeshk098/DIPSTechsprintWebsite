@@ -10,7 +10,18 @@
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="{% static 'assets/img/ic.ico'%}" />
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <script defer type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+        <!-- Bootstrap core JS-->
+        
+        <script defer src="{% static 'assets/mail/jqBootstrapValidation.js' %}"></script>
+        <script defer src="{% static 'assets/mail/contact_me.js'%}"></script>
+        <!-- Third party plugin JS-->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script defer src="{% static 'js/scripts3.js'%}"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
@@ -73,8 +84,8 @@
             <div class="container-fluid p-0">
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% static 'assets/img/tech.jpg'%}">
-                            <img class="img-fluid" src="{% static 'assets/img/tech.jpg'%}" alt="" />
+                        <a class="portfolio-box" href="{% static 'assets/img/tech.webp'%}">
+                            <img class="img-fluid" src="{% static 'assets/img/tech.webp'%}" alt="" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Hackathon</div>
                                 <div class="project-name">Think-a-thon</div>
@@ -82,8 +93,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% static 'assets/img/codee.jpg'%}">
-                            <img class="img-fluid" src="{% static 'assets/img/codee.jpg'%}" alt="" />
+                        <a class="portfolio-box" href="{% static 'assets/img/codee.webp'%}">
+                            <img class="img-fluid" src="{% static 'assets/img/codee.webp'%}" alt="" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Decoding</div>
                                 <div class="project-name">404-Imposter Not Found</div>
@@ -91,8 +102,8 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="{% static 'assets/img/gameing.jpg'%}">
-                            <img class="img-fluid" src="{% static 'assets/img/gaming.jpg'%}" alt="" />
+                        <a class="portfolio-box" href="{% static 'assets/img/gaming.webp'%}">
+                            <img class="img-fluid" src="{% static 'assets/img/gaming.webp'%}" alt="" />
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-50">Gaming</div>
                                 <div class="project-name">FPS</div>
@@ -155,7 +166,7 @@
                             </div>
                             <br />
                             <div id="success"></div>
-                            <script src="https://smtpjs.com/v3/smtp.js"></script>
+                            
                             <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit" >Send</button></div>
                             
                         </form>
@@ -189,15 +200,5 @@
         <footer class="bg-light py-5">
             <div class="container"><div class="small text-center text-muted">Made from <i class="fa fa-home"></i> by Avaneesh Kumar, Narayan Sreekumar and Pavel<br>Copyright © IT COUNCIL DPSS 2020 </div></div>
         </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <script src="{% static 'assets/mail/jqBootstrapValidation.js' %}"></script>
-        <script src="{% static 'assets/mail/contact_me.js'%}"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{% static 'js/scripts3.js'%}"></script>
     </body>
 </html>
