@@ -34,7 +34,7 @@ def submail(request):
     if request.method == "POST":
         email = request.POST.get('email')
         send_mail("Website Subscription List Added: "+ email, "You need to add a user to the website  subscription list.\n\n" + "Here are the details:\n\nEmail:" + email, email, ['dps.it.council@gmail.com'], fail_silently=False)
-        return HttpResponseRedirect('/TechSprint')
+        return HttpResponseRedirect('/techsprint')
         
 def TechSprint(request):
     return render(request, 'index2.html')

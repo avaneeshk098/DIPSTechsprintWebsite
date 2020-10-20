@@ -1,5 +1,4 @@
 {% load static %}
-{% csrf_token %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,147 +6,121 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>IT Council-DPSS</title>
+        <title>IT COUNCIL-DPSS</title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/ic.ico' %}" />
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/ic.ico'%}" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
-        
+        <link href="{% static 'css/styles3.css'%}" rel="stylesheet" />
+        <link href="static\font-awesome\css\font-awesome.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary fixed-top " id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger navbar-fixed-top  " href="#page-top" id="head"><b>IT COUNCIL<b></a>
-                
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">IT COUNCIL</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="/techsprint">Tech<i style="color:lime">Sprint</i></a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a></li> 
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Tech<i style="color:chartreuse">Sprint</i></a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <div class="masthead-heading text-uppercase mb-0">
+        <header class="">
+            <div class="fullscreen-bg">
+                <video loop muted autoplay class="fullscreen-bg__video">
+                    <source src="static/video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="container h-100 head-main">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h1 class="text-uppercase text-light font-weight-bold"><br><br><br><br><br><br>IT COUNCIL</h1>
+                        <hr class="divider my-4" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 font-weight-light  mb-5">Innovation,Hacking,Programming and more!</p>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
                 </div>
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0"><br><br><br>it council<h6 class="masthead-subheading text-uppercase mb-0"><br>DPS Bangalore south<br><br></h6></h1>
-                <div class="fullscreen-video-wrap">
-                    <video autoplay muted loop >
-                        <source src="{% static 'video.mp4'%}" type="video/mp4">
-                   </video>
-                </div>
-                <!-- Icon Divider-->
-                
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Innovation - Hacking - AND more!</p>
             </div>
         </header>
-        <!-- Portfolio Section-->
-        <section class="masthead bg-primary text-white text-center" id="portfolio">
-            <div class="container d-flex flex-column">
-                <!-- Portfolio Section Heading-->
-                <h2 class="masthead-heading text-uppercase mb-0" style="color:white">Tech<i style="color:chartreuse">Sprint</i>-<h2 class="masthead-heading text-uppercase mb-0" style="color:white">2020 Events:<br><br></h2></h2>
-                
-                <!-- Icon Divider-->
-                
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row">
-                    <!-- Portfolio Item 1-->
-                    <div class="col-md-6 col-lg-4 mb-5 hoverable">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><br><br></div>                            </div>
-                            <img class="img-fluid rounded mb-5" src="{% static 'assets/img/portfolio/Hackathon.jpg' %}" alt="" />
-                            <div class="centered mt-5"><h4>Think-a-thon</h4></div>
-                        </div>
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h4 class="text-white-50 mb-4">IT Council is a group of remarkable people working hard towards our primary goal - Bringing World Class Tech Exposure into our School .</h4>
+                        <hr class="divider light my-4" />
+                        <p class="text-white-50 mb-4">Headed by very capable President-Namish Srinivas and Vice President-Neil Moorthy along with a clan of technical minds, we plan to bring to you an enormous plethora of awesome never before seen events.</p>
                     </div>
-                    
-                    <br>
-                    <!-- Portfolio Item 2-->
-                    <div class="col-md-6 col-lg-4 mb-5 hoverable">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><br><br></div>                            </div>
-                            <img class="img-fluid rounded mb-5" src="{% static 'assets/img/portfolio/black.jpg' %}" alt="" />
-                            <div class="centered mt-5"><h6 style="color:red">404 Imposter <br> not found!<br></h6></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Portfolio Item 3-->
-                    <div class="col-md-6 col-lg-4 mb-5 hoverable">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><br><br></div>
-                                <div class="centered mt-5"><h4>FPS</h4></div>
-                            </div>
-                            <img class="img-fluid rounded mb-5" src="{% static 'assets/img/portfolio/games.jpg' %}" alt="" />
-                        </div>
-                        </br>
-                    </div>        
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><br><br></div>
-                            </div>
-                            <a class="btn btn-xl btn-outline-light">Take part!</a>
-                        </div>
-                        </br>
-                    </div>
-                </div>  
-        </section>
-        <!-- About Section-->
-        <section class="masthead bg-primary text-white text-center" id="about">
-            <div class="container d-flex flex-column">
-                <!-- About Section Heading-->
-                <h2 class="masthead-heading text-uppercase mb-0 ">about</h2>
-                
-
-                <div class="video-container">
-                    <video autoplay muted loop >
-                        <source src="{% static 'video.mp4'%}" type="video/mp4">
-                   </video>
                 </div>
-            </br>
-                </div>
-                <!-- About Section Content-->
-                <div class="row pr-2 pl-2">
-                    <div class="col-lg-4 ml-auto"><p class="lead"><br> IT Council is a group of remarkable people working hard towards our primary goal - Bringing World Class Tech Exposure into our School .</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">Headed by very capable President-Namish Srinivas and Vice President-Neil Moorthy along with a clan of technical minds, we plan to bring to you an enormous plethora of awesome never before seen events.</p></div>
-                </div>
-                <div class="video-container">
-                    <video autoplay muted loop >
-                        <source src="{% static 'video.mp4'%}" type="video/mp4">
-                   </video>
-                </div>
-                <!-- About Section Button-->
-                
             </div>
         </section>
-        <!-- Contact Section-->
-        <section class="masthead bg-primary text-white text-center" id="contact">
+        
+        <!-- Portfolio-->
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{% static 'assets/img/tech.jpg'%}">
+                            <img class="img-fluid" src="{% static 'assets/img/tech.jpg'%}" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Hackathon</div>
+                                <div class="project-name">Think-a-thon</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{% static 'assets/img/codee.jpg'%}">
+                            <img class="img-fluid" src="{% static 'assets/img/codee.jpg'%}" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Decoding</div>
+                                <div class="project-name">404-Imposter Not Found</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="{% static 'assets/img/gameing.jpg'%}">
+                            <img class="img-fluid" src="{% static 'assets/img/gaming.jpg'%}" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Gaming</div>
+                                <div class="project-name">FPS</div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Call to action-->
+        <section class="page-section bg-dark text-white">
+            <div class="container text-center">
+                <h2 class="mb-4">Register Now for Tech<i style="color: chartreuse;">Sprint</i> 2020</h2>
+                <a class="btn btn-light btn-xl" href="/techsprint">Proceed</a>
+            </div>
+        </section>
+        <!-- Contact-->
+        <br><br>
+        <section class="masthead  text-white text-center" id="contact">
             <div class="container d-flex  flex-column">
                 <!-- Contact Section Heading-->
-                <h3 class="masthead-heading text-uppercase mb-0">Contact us<br/><br/></h3>
+                <h3 class="masthead-heading text-uppercase mb-0">Contact us</h3>
                 <div>
-                    <video autoplay muted loop id='myVideo' >
-                        <source src="{% static 'video.mp4'%}" type="video/mp4">
-                   </video>
-                </div>
-                
-                
-                <!-- Contact Section Form-->
+                    
+                    <!-- Contact Section Form-->
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
@@ -190,263 +163,41 @@
                 </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="footer text-center">
+        <section class="page-section" id="contact">
             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0" style="color:cornsilk">Let's Get In Touch!</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-danger mb-5" style="color: white">Have doubts or wanna know about upcoming awesome events? Give us a DM or send us an email and we will get back to you as soon as possible!</p>
+                    </div>
+                </div>
                 <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            11th KM, Bikaspura Main Road 
-                            <br />
-                            Kanakapura Road
-                        </p>
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <a href="https://www.instagram.com/dipstechsprint/"><i class="fab fa-fw fa-instagram fa-3x mb-3 text-muted"></a></i>
+                        <div style="color: tomato;"><a href = "https://www.instagram.com/dipstechsprint/">Instagram</a></div>
                     </div>
-                    <!-- Footer Social Icons -->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Social Media</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/dipstechsprint/"><i class="fab fa-fw fa-instagram"></i></a><br><br>
-                        <div><small>or mail us on</small><br><small>Mail ID: dps.it.council@gmail.com</small></div>
-
-                    </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About IT COUNCIL</h4>
-                        <p class="lead mb-0">
-                            IT Council is a Community run initiative by
-                            <a href="http://south.dpsbangalore.edu.in/">DPS BANGALORE SOUTH</a>
-                            .
-                        </p>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                        <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                        <a class="d-block" href="dps.it.council@gmail.com">dps.it.council@gmail.com</a>
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Made from <i class="fa fa-home"></i> by Avaneesh Kumar, Narayan Sreekumar and Pavel<br>Copyright © IT COUNCIL DPSS 2020 </div></div>
         </footer>
-        <!-- Copyright Section-->
-        <div class="legend">
-            <div class='container'><small>Made from <i class="fa fa-home"></i> by Avaneesh Kumar and Narayan Sreekumar and Pavel<br>Copyright © IT COUNCIL DPSS 2020</small></div>
-        </div>
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright © IT COUNCIL DPSS 2020</small></div>
-        </div>
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
-        <div class="scroll-to-top d-lg-none position-fixed">
-            <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
-        </div>
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Hackathon</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="{% static 'assets/img/portfolio/Hackathon.jpg'%}" alt="" />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5"> Nobody is perfect but we can aspire to be by improving ourselves everyday, similarly technology isn't perfect, so do you think you can improve it? Its time to show off your futuristic minds and solutions.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">Decoding</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="{% static 'assets/img/portfolio/puzzle.jpg'%}" alt="" />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Everyone has a sherlock in them, this is pretty much a virtual treasure hunt, a chunk of computer and programming knowledge involved. Lets see if you can get through our virtual road (we are sure you won't) prerequisites: a very high level of curiosity.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h3 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">FPS-The Ultimate Gaming Battle.</h3>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="{% static 'assets/img/portfolio/games.jpg'%}" alt="" />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Esports is growing at an exponential rate, and we surely don't want to lag behind in this spectra, everybody hates lag and thus, we are really excited to bring you the one and only FPS, our school's first gaming tournament. Think you are OP? Let's see.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label">Controller</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="{% static 'assets/img/portfolio/game.png'%}" alt="" />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal5Label">Locked Safe</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="{% static 'assets/img/portfolio/safe.png'%}" alt="" />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal6Label">Submarine</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="{% static 'assets/img/portfolio/submarine.png'%}" alt="" />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Bootstrap core JS-->
-        <script>
-            var url_mail = "{% static 'assets/mail/contact_me.php' %}"
-        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
         <script src="{% static 'assets/mail/jqBootstrapValidation.js' %}"></script>
         <script src="{% static 'assets/mail/contact_me.js'%}"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <!-- Core theme JS-->
-        <script src="{% static 'js/scripts.js'%}"></script>
-        <script src="{% static 'js/scripts1.js' %}"></script>
-        
+        <script src="{% static 'js/scripts3.js'%}"></script>
     </body>
 </html>
