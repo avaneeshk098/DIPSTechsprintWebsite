@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.conf import settings
 from django.core.mail import send_mail
 from .models import Item
 from django.http import HttpResponse, HttpResponseRedirect
