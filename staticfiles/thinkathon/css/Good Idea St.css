@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'Good Idea St';
+	src: url(../fonts/GoodIdeaSt.woff2) format('woff2'),
+	url(../fonts/GoodIdeaSt.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
