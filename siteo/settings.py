@@ -22,10 +22,10 @@ print(BASE_DIR)
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@(1$(9x4$x8+aomzyq%)^(xyv+od&eyj&@!cdn2c7$=v_v7k8#'
+SECRET_KEY = os.environ.get('PRODUCTION_SECRET', True)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 

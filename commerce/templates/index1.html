@@ -23,8 +23,8 @@
         <!-- Core theme JS-->
         <script defer src="{% static 'js/scripts3.js'%}"></script>
         <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic&display=swap" rel="stylesheet" type="text/css" />
         <!-- Third party plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -49,7 +49,9 @@
         <!-- Masthead-->
         <header class="">
             <div class="fullscreen-bg">
-                <img class="fullscreen-bg__video" src="static/video.gif" />
+                <video loop muted autoplay class="fullscreen-bg__video">
+                    <source src="static/video.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="container h-100 head-main">
                 <div class="row h-100 align-items-center justify-content-center text-center">
