@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 import datetime
 import http
 # Create your views here.
-def item_list(request):
+def index(request):
     return render(request, "index1.html") 
 
 def gaming(request):
@@ -37,10 +37,10 @@ def submail(request):
         send_mail("Website Subscription List Added: "+ email, "You need to add a user to the website  subscription list.\n\n" + "Here are the details:\n\nEmail:" + email, email, ['dps.it.council@gmail.com'], fail_silently=False)
         return HttpResponseRedirect('/techsprint')
         
-def TechSprint(request):
+def techsprint(request):
     return render(request, 'index2.html')
     
-def index(request):
+def decoding_index(request):
     if (datetime.date(2020, 11,13) - datetime.date.today()).days <= 0:
         response = render(request, 'index.html')
         response.set_cookie("arestedkjkhfdiiens", datetime.datetime.now())

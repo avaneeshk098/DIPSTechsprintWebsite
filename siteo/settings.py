@@ -29,12 +29,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -76,7 +77,7 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'commerce/templates'),)
 
 WSGI_APPLICATION = 'siteo.wsgi.application'
 
-
+SITE_ID = 1
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
