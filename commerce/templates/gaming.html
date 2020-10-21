@@ -19,6 +19,32 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'gaming/fonts/fontawesome5-overrides.min.css'%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script>    
+        $(document).ready(() => {
+            $('.valo').click(() => {
+                document.getElementById('valorant').style = "display: block;";
+                document.getElementsByClassName('valo')[0].style = "display: none; margin-bottom: 3rem !important;";
+                document.getElementsByClassName('cod')[0].style = "display: none; margin-top: 3rem !important; margin-bottom: 3rem !important;";
+                document.getElementsByClassName('back')[0].style = "display: block; margin-top: 3rem !important; margin-bottom: 3rem !important;";
+            });
+            $('.cod').click(() => {
+                document.getElementById('cod').style = "display: block;";
+                document.getElementsByClassName('valo')[0].style = "display: none; margin-bottom: 3rem !important;";
+                document.getElementsByClassName('cod')[0].style = "display: none; margin-top: 3rem !important; margin-bottom: 3rem !important;";
+                document.getElementsByClassName('back')[0].style = "display: block; margin-top: 3rem !important; margin-bottom: 3rem !important;";
+            });
+            $('.back').click(() => {
+                document.getElementById('valorant').style = "display: none;"
+                document.getElementById('cod').style = "display: none;"
+                document.getElementsByClassName('valo')[0].style = "display: block; margin-bottom: 3rem !important;";
+                document.getElementsByClassName('cod')[0].style = "display: block; margin-top: 3rem !important; margin-bottom: 3rem !important;";
+                document.getElementsByClassName('back')[0].style = "display: none; margin-top: 3rem !important; margin-bottom: 3rem !important;";
+            })
+        })
+    </script>
 </head>
 <style>
     @font-face {
@@ -129,7 +155,12 @@
         <div class="col" style="display: flex; flex-direction: column; justify-content: center; align-items: center; background-image:url({% static 'gaming/img/map-image.png' %});">
             <h1 style="text-align: center;font-family: Gameplay;color: rgb(255,255,255);letter-spacing: 8px;">REGISTER</h1>
             <h3 class="text-center section-subheading text-muted">Ready to compete in the tournament!</h3>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehwbffGxcYDKv_4kq92SgasD9wfJk5rZdcQNy19lGsD8blxw/viewform?embedded=true" width="540" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>    </section>
+            <button class="btn btn-primary btn-xl uppercase valo" style="margin-bottom: 3rem !important;">Valorant</button>
+            <button class="btn btn-primary btn-xl uppercase cod" style="margin-top: 3rem !important; margin-bottom: 3rem !important;">Call of Duty Mobile</button>
+            <button class="btn btn-primary btn-xl uppercase back" style="display: none !important; margin-bottom: 3rem !important; margin-top: 3rem !important;">Back</button>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfAymXw0bOR-HWqTNmlPWlkXD6RVDaSWKPqnTUi2xnNDCmR-g/viewform?embedded=true" style="display: none !important;" width="640" height="870" frameborder="0" marginheight="0" marginwidth="0" id="valorant">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9KjqWd9PkvZqlLSoniZvEsqVbUg7piT1vThwwIKhu00SsDQ/viewform?embedded=true" style="display: none !important;" width="640" height="1375" frameborder="0" marginheight="0" marginwidth="0" id="cod">Loading…</iframe>
+    </section>
     <footer>
         <div class="container">
             <div class="row">
@@ -145,10 +176,6 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="{% static 'gaming/js/agency.js'%}"></script>
 </body>
-
+<script src="{% static 'gaming/js/agency.js'%}"></script>
 </html>
