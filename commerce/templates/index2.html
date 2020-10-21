@@ -1,11 +1,10 @@
 {% load static %}
-{% csrf_token %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script defer src="{% static 'my.js'%}"></script>
-    
+        {% csrf_token %}
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="In a world where technology is integreted in almost all aspects of life, we here at Delhi Public School Bangalore South feel the importance of it and thus bringing you our first technology fest, DIPS Techsprint. The DIPS Techsprint is a one-of-a-kind fest wih events ranging from gaming to hackathons." />
