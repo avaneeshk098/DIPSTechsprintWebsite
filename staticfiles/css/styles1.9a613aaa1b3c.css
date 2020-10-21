@@ -634,7 +634,7 @@ hr {
 
 /* The sidebar menu */
 /* The navigation menu links */
-/* Changes the color of text once the text is clicked in the navbar*/
+/*Changes the color of text once the text is clicked in the navbar*/
 .sidenav a.selected{
    color: #4286f4;
 }
@@ -656,6 +656,16 @@ hr {
 }
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
+}
+
+.navbar-toggler{
+  display: none;
+}
+
+@media screen and (max-width: 728px){
+  .navbar-toggler{
+    display: inline-block;
+  }
 }
 
 .navbar-nav {
@@ -985,7 +995,16 @@ body {
 
 #mainNav {
   min-height: 3.5rem;
-  background-color: #fff;
+  background-color: #000;
+}
+@media screen and (max-width: 728px){
+  .image5{
+      width: 100% !important;
+  }
+
+  #head{
+    width: 100%; text-align: center;
+  }
 }
 #mainNav .navbar-brand {
   color: #000000;
