@@ -634,7 +634,7 @@ hr {
 
 /* The sidebar menu */
 /* The navigation menu links */
-//Changes the color of text once the text is clicked in the navbar
+/* Changes the color of text once the text is clicked in the navbar*/
 .sidenav a.selected{
    color: #4286f4;
 }
