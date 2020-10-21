@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="{% static 'my.js'%}"></script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script defer src="{% static 'my.js'%}"></script>
     
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -31,8 +31,9 @@
         <script defer crossorigin = "anonymous" src="{% static 'app.js'%}"></script>
     </head>
     <style>
-        .event-link{
-
+        .event-link:hover{
+            text-decoration: none;
+            background-color: #64a19d;
         }
     </style>
     <body id="page-top">
