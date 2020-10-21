@@ -7,27 +7,37 @@
     
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="In a world where technology is integreted in almost all aspects of life, we here at Delhi Public School Bangalore South feel the importance of it and thus bringing you our first technology fest, DIPS Techsprint. The DIPS Techsprint is a one-of-a-kind fest wih events ranging from gaming to hackathons." />
+        <meta name="author" content="Avaneesh Kumar and Narayan Sreekumar" />
+        <meta name="keywords" content="dipstechsprint, DPS Bangalore South, DIPS Techsprint, Tech fest, Hackathon, Gaming, Fests"/>
+        <meta name="google-site-verification" content="IB-Wf_GnG7WByBbxPZY-KC1NWRBGzLBb3juIIPFF6ms" />
+        <meta http-equiv="Cache-Control" content="max-age=31536000"/>
+        <meta http-equiv="Cache-Control" content="public"/>
         <title>Techsprint - Home</title>
-        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/ts.ico' %}" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link type="image/x-icon" href="{% static 'assets/img/ts.ico' %}" crossorigin="anonymous" rel="preload" as="icon" onload="this.rel='icon'"/>
+        <!-- Font Awesome icons (free version)-->        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" crossorigin="anonymous" rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" crossorigin="anonymous" rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{% static 'css/styles1.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/styles1.css' %}" crossorigin="anonymous" rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" />
+        <!-- Bootstrap core JS-->
+        <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <script defer crossorigin = "anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script defer crossorigin = "anonymous" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script defer crossorigin = "anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script defer crossorigin = "anonymous" src="{% static 'js/scripts1.js' %}"></script>
+        <script defer crossorigin = "anonymous" src="{% static 'app.js'%}"></script>
     </head>
     <style>
-        .event-link:hover{
-            text-decoration: none;
-            background-color: #64a19d;
+        .event-link{
+
         }
     </style>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top " id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top pt-0 pb-0 pr-0 pl-0" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger navbar-fixed-top  " href="#page-top" id="head"><b>Tech<i style="color: #39ff14;">Sprint</i><b></a>
                 
@@ -118,7 +128,7 @@
                             </style>
       
                             <div class="containera">
-                              <img src="{% static 'assets/img/tech.jpg' %}" alt="Avatar" class="image">
+                              <img src="{% static 'assets/img/tech.webp' %}" alt="Avatar" class="image">
                               <div class="overlay">
                                 <div class="text">
                                     <a class="btn btn-primary js-scroll-trigger " href="/techsprint/thinkathon#contact">Register!</a>
@@ -181,7 +191,7 @@
                             </style>
       
                             <div class="containerb">
-                              <img src="{% static 'assets/img/codee.jpg' %}" alt="Avatar" class="image5">
+                              <img src="{% static 'assets/img/codee.webp' %}" alt="Avatar" class="image5">
                               <div class="overlay5">
                                 <div class="text">
                                     <a class="btn btn-primary js-scroll-trigger " href="/techsprint/decoding#contact">Register!</a>
@@ -253,7 +263,7 @@
                             </style>
       
                             <div class="containerc">
-                              <img src="{% static 'assets/img/gam.jpg' %}" alt="Avatar" class="image6">
+                              <img src="{% static 'assets/img/gam.webp' %}" alt="Avatar" class="image6">
                               <div class="overlay6">
                                 <div class="text">
                                     <a class="btn btn-primary js-scroll-trigger " href="/techsprint/fps#contact">Register!</a>
@@ -334,13 +344,5 @@
         </section>
         <!-- Footer-->
         <footer class="footer bg-black small text-center text-white-50"><div class="container text-white-50">Made from <i class="fa fa-home"></i> By Avaneesh Kumar, Narayan Sreekumar and Pavel<br>Copyright © TechSprint 2020</div></footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="{% static 'js/scripts1.js' %}"></script>
-        <script src="{% static 'app.js'%}"></script>
     </body>
 </html>
