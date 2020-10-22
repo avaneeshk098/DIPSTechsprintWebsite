@@ -86,16 +86,16 @@
     console.log('light',light_pos);
     console.log('menu',menu_pos);
     console.log('scroll',scroll);
-    
-    if(menu_pos == 0) {
-    	$('#mainNav').removeClass('menu_white');
-      $('#mainNav').removeClass('menu_black');
+    if (menu_pos != 0){
+        if(menu_pos > light_pos && menu_pos < (light_pos + light_height)) {
+            $('#mainNav').addClass('menu_white');
+        $('#mainNav').removeClass('menu_black');
+        }
+        else {
+            $('#mainNav').removeClass('menu_white');
+        $('#mainNav').addClass('menu_black');
+        }
     }
-    else {
-    	$('#mainNav').removeClass('menu_white');
-      $('#mainNav').addClass('menu_black');
-    }
-    
   })
 })
 

@@ -87,13 +87,13 @@
     console.log('menu',menu_pos);
     console.log('scroll',scroll);
     
-    if(menu_pos > light_pos && menu_pos < (light_pos + light_height)) {
-    	$('.container').addClass('menu_white');
-      $('.container').removeClass('menu_black');
+    if(menu_pos == 0) {
+    	$('#mainNav').removeClass('menu_white');
+      $('#mainNav').removeClass('menu_black');
     }
     else {
-    	$('.container').removeClass('menu_white');
-      $('.container').addClass('menu_black');
+    	$('#mainNav').removeClass('menu_white');
+      $('#mainNav').addClass('menu_black');
     }
     
   })

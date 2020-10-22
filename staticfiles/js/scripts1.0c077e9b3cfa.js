@@ -87,7 +87,7 @@
     console.log('menu',menu_pos);
     console.log('scroll',scroll);
     
-    if(menu_pos == 0) {
+    if(menu_pos > light_pos && menu_pos < (light_pos + light_height)) {
     	$('#mainNav').removeClass('menu_white');
       $('#mainNav').removeClass('menu_black');
     }

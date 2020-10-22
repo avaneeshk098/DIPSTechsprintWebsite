@@ -203,6 +203,14 @@ hr {
   margin-right: auto;
   margin-left: auto;
 }
+
+.menu_white{
+  background-color: white !important;
+}
+
+.menu_black{
+  background-color: black !important;
+}
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
