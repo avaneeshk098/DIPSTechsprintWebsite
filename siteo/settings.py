@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,7 +28,7 @@ DEBUG = False
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -126,9 +125,9 @@ USE_TZ = True
 
 EMAIL_USE_TLS   = True
 EMAIL_HOST      = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'dps.it.council@gmail.com'
-EMAIL_HOST_PASSWORD = 'ItCouncilDps'
-EMAIL_PORT      = 587
+EMAIL_HOST_USER = os.environ.get('HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('HOST_PASS')
+EMAIL_PORT = 587
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -142,4 +141,3 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-django_heroku.settings(locals())
