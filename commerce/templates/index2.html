@@ -15,6 +15,7 @@
         <title>Techsprint - Home</title>
         <link type="image/x-icon" href="{% static 'assets/img/ts.ico' %}" crossorigin="anonymous" rel="shortcut icon" />
         <!-- Font Awesome icons (free version)-->        <!-- Google fonts-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" crossorigin="anonymous" rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" crossorigin="anonymous" rel="preload" type="text/css" as="style" onload="this.rel='stylesheet'" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -34,19 +35,20 @@
             text-decoration: none;
             background-color: #64a19d;
         }
+        
     </style>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger navbar-fixed-top  text-white" href="#page-top" id="head"><b>Tech<i style="color: #39ff14;">Sprint</i><b></a>
+                <a class="navbar-brand js-scroll-trigger text-white" href="#page-top"><span class="uppercase">Tech</span><span class="uppercase" style="color: chartreuse">Sprint</span></a>
+                <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i style="color: white;" class="fa fa-bars"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/" style="color: #39ff14;">IT COUNCIL</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" style="color: #39ff14;">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects" style="color: #39ff14;">Events</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/techsprint/team" style="color: #39ff14;">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#signup" style="color: #39ff14;"   >Contact</a></li>
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="/">IT Council</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#projects">Events</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-white" href="#signup">Contact</a></li>
                     </ul>
                 </div>
             </div>
