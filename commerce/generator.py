@@ -5,7 +5,7 @@ import random, base64
 passes = ["DPS{1tz_R3D}", "DPS{Wh1T3_SuS}", "DPS{P1nk_V3nTed}", "DPS{1Tz_Gr3eN}", "DPS{Blu3_SuS}", "DPS{y3LL0W}", "DPS{N0T_BlaCk}", "DPS{Br0Wn_V3nTed}", "DPS{CyAN_SUs}", "DPS{0RanG3}"]
 
 def generate(count):
-    secret = passes[count%10] 
+    secret = passes[count] 
     indent = 0
     word = list(secret)
     random.shuffle(word)
