@@ -24,6 +24,8 @@ def team(request):
     return render(request, 'team.html')
 
 hint = ['HINT 1: This is the first clue;', 'HINT 2: This is the second clue;', 'HINT 3: This is the third clue']
+passes = ["DPS{1tz_R3D}", "DPS{Wh1T3_SuS}", "DPS{P1nk_V3nTed}", "DPS{1Tz_Gr3eN}", "DPS{Blu3_SuS}", "DPS{y3LL0W}", "DPS{N0T_BlaCk}", "DPS{Br0Wn_V3nTed}", "DPS{CyAN_SUs}", "DPS{0RanG3}"]
+
 def homemail(request):
     if(request.method == "POST"):
         name = request.POST.get('name')
@@ -45,20 +47,20 @@ def techsprint(request):
 def verify1(request):
     if request.method == 'POST':
         code = int(request.POST.get('code'))
+        count = random.randint(0,9)
+        code1 = generate(count)
         result = None
         if code == 287996:
-            result = JsonResponse({'answer': True})
+            result = JsonResponse({'answer': True, 'code': code1})
         else:
-            result = JsonResponse({'answer': False})
+            result = JsonResponse({'answer': False, 'code': code1})
         return result
 
 def verify2(request):
     if request.method == 'POST':
         para = request.POST.get('para')
         result = None
-        count = random.randint(0,9)
-        generate(count)
-        if para == 'Hello, World':
+        if para in passes:
             result = JsonResponse({'answer': True})
         else:
             result = JsonResponse({'answer': False})

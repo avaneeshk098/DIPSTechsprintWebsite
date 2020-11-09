@@ -67,7 +67,7 @@
                         if (result.answer == true){
                             alert('Congratulations! You have cracked the code. Write that code somewhere. If you refresh the page, you will have to re-enter it. :)')
                             document.querySelector('.main-content').innerHTML=""
-                            document.querySelector('.main-content').innerHTML+='[2]<a href="{% static "decrypt.txt" %}" download="{% static "decrypt.txt" %}"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your second challenge file</button></a>'
+                            document.querySelector('.main-content').innerHTML+="<p>What is this jibberish?</p> \n" + `<p style="font-size: 0.5em;">${result.code}</p>`
                             document.querySelector('.verification-form').style="display: none;"
                             document.querySelector('.verification-text').style="display: none;"
                             document.querySelector('.para-text').style="display: block;"
@@ -90,14 +90,9 @@
                     },
                     headers: {'X-CSRFToken' : csrftoken},
                     success: (result) => {
+                        document.querySelector('.para-field').value = "";
                         if(result.answer){
-                            alert('Congratulations! You have cracked the paragraph. Save that paragraph somewhere in txt file maybe. If you refresh the page, you will have to re-enter it. :)')
-                            document.querySelector('.main-content').innerHTML=""
-                            document.querySelector('.main-content').innerHTML+='[3]<a href="{% static "code.txt" %}" download="{% static "code.txt" %}"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your third challenge file</button></a>'
-                            document.querySelector('.para-text').style="display: none;"
-                            document.querySelector('.para-form').style="display: none;"
-                            document.querySelector('.key-text').style="display: none;"
-                            document.querySelector('.key-form').style="display: none;"
+                            alert('Congratulations! You have cracked the challenge! We will announce the results 30 minutes after the end of the event.')
                         }
                         else{
                             alert('Sorry, the code submitted was incorrect. :(')
@@ -121,7 +116,7 @@
         <div class="main">
             <header>
                 <div class="overlay">
-                    <div class="inner" style="padding-bottom: 0;">
+                    <div class="inner" style="padding-bottom: 0; overflow: auto;">
                         <p>Hello guys! Congratulations on clearing the first challenge. Now we are going to give you a set of chellenges and hope you guys will complete it soon</p><br><br>
                         <p>The Following are the next challenges:</p><br><br> 
                         <p class="main-content">[1]<a href="{% static 'secret.mp3' %}" download="{% static 'secret.mp3' %}"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your first challenge file</button></a></p><br>
@@ -130,14 +125,9 @@
                             <input type="number" class="ans-field"/>
                             <button type="submit" class="btn">Submit</button>
                         </form>
-                        <p class="para-text" style="display:none;">Enter the paragraph to proceed</p>
+                        <p class="para-text" style="display:none;">Enter the password to proceed</p>
                         <form class="para-form" style="display:none; margin-bottom: 0;">
                             <input type="text" class="ans-field para-field"/>
-                            <button type="submit" class="btn">Submit</button>
-                        </form>
-                        <p class="key-text" style="display:none;">Enter the key to proceed</p>
-                        <form class="key-form" style="display:none; margin-bottom: 0;">
-                            <input type="text" class="ans-field key-field"/>
                             <button type="submit" class="btn">Submit</button>
                         </form>
                     </div>
