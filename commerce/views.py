@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.conf import settings
 from django.core.mail import send_mail
 from .models import Item
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 import datetime
 import http
+from .generator import generate
+import random
 # Create your views here.
 def index(request):
     return render(request, "index1.html") 
@@ -40,40 +42,62 @@ def submail(request):
 def techsprint(request):
     return render(request, 'index2.html')
     
+def verify1(request):
+    if request.method == 'POST':
+        code = int(request.POST.get('code'))
+        result = None
+        if code == 287996:
+            result = JsonResponse({'answer': True})
+        else:
+            result = JsonResponse({'answer': False})
+        return result
+
+def verify2(request):
+    if request.method == 'POST':
+        para = request.POST.get('para')
+        result = None
+        count = random.randint(0,9)
+        generate(count)
+        if para == 'Hello, World':
+            result = JsonResponse({'answer': True})
+        else:
+            result = JsonResponse({'answer': False})
+        return result
+
 def decoding_index(request):
-    if (datetime.date(2020, 11,13) - datetime.date.today()).days <= 0:
-        response = render(request, 'index.html')
-        response.set_cookie("arestedkjkhfdiiens", datetime.datetime.now())
-    else:
-        response = HttpResponse('This page is not accessible at the momment.')
+    #if (datetime.date(2020, 11,13) - datetime.date.today()).days <= 0:
+    response = render(request, 'index.html')
+        #response.set_cookie("arestedkjkhfdiiens", datetime.datetime.now())
+    #else:
+        #response = HttpResponse('This page is not accessible at the momment.')
     return response
 
 def hints(request):
-    if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
-        response = render(request, 'hints.html')
-    else:
-        response = HttpResponse('This page is not accessible at the momment.')
+    #if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
+    response = render(request, 'hints.html')
+    #else:
+        #response = HttpResponse('This page is not accessible at the momment.')
     return response
 
 def challenge(request):
-    if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
-        response = render(request, 'challenge.html')
-    else:
-        response = HttpResponse('This page is not accessible at the momment.')
+    #if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
+    response = render(request, 'challenge.html')
+    #else:
+        #response = HttpResponse('This page is not accessible at the momment.')
     return response
 
 def acknowledge(request):
-    if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
-        response = render(request, 'acknowledge.html')
-    else:
-        response = HttpResponse('This page is not accessible at the momment.')
+    #if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
+    response = render(request, 'acknowledge.html')
+    #else:
+        #response = HttpResponse('This page is not accessible at the momment.')
     return response
 
 def scoreboard(request):
-    if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
-        response = render(request, 'scoreboard.html')
-    else:
-        response = HttpResponse('This page is not accessible at the momment.')
+    #if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
+    response = render(request, 'scoreboard.html')
+    #else:
+        #response = HttpResponse('This page is not accessible at the momment.')
     return response
 
 def hints_post(request, id):

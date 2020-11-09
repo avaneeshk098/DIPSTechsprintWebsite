@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DPS IT COUNCIL</title>
+        <link rel="stylesheet" href="{% static 'style.css'%}">
+
     <link rel="stylesheet" href="{% static 'challenge.css' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script src="{% static 'app.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js" integrity="sha384-qlmct0AOBiA2VPZkMY3+2WqkHtIQ9lSdAsAn5RUJD/3vA5MKDgSGcdmIv4ycVxyn" crossorigin="anonymous"></script>
     <script type="text/javascript">
         window.onload = function() {
             document.addEventListener("contextmenu", function(e) {
@@ -46,14 +51,68 @@
                 e.preventDefault();
                 return false;
             }
+
+            const csrftoken = Cookies.get('csrftoken');
+            $('.verification-form').submit((e) => {
+                e.preventDefault();
+                $.ajax({
+                    url: '/techsprint/treasurehunt_challenge/verify1',
+                    type: 'POST',
+                    data: {
+                        code : $('.ans-field').first().val(),
+                    },
+                    headers: {'X-CSRFToken': csrftoken},
+                    success: (result)=>{
+                        document.querySelector('.ans-field').value = "";
+                        if (result.answer == true){
+                            alert('Congratulations! You have cracked the code. Write that code somewhere. If you refresh the page, you will have to re-enter it. :)')
+                            document.querySelector('.main-content').innerHTML=""
+                            document.querySelector('.main-content').innerHTML+='[2]<a href="{% static "decrypt.txt" %}" download="{% static "secret.txt" %}"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your second challenge file</button></a>'
+                            document.querySelector('.verification-form').style="display: none;"
+                            document.querySelector('.verification-text').style="display: none;"
+                            document.querySelector('.para-text').style="display: block;"
+                            document.querySelector('.para-form').style="display: block;"
+                        }
+                        else{
+                            alert('Sorry, the code submitted was incorrect. :(')
+                        }
+                    }
+                })
+            })
+
+            $(".para-form").on('submit', (e) => {
+                e.preventDefault()
+                $.ajax({
+                    url: '/techsprint/treasurehunt_challenge/verify2',
+                    method: 'POST',
+                    data: {
+                        para: $('.para-field').first().val(),
+                    },
+                    headers: {'X-CSRFToken' : csrftoken},
+                    success: (result) => {
+                        if(result.answer){
+                            alert('Congratulations! You have cracked the paragraph. Save that paragraph somewhere in txt file maybe. If you refresh the page, you will have to re-enter it. :)')
+                            document.querySelector('.main-content').innerHTML=""
+                            document.querySelector('.main-content').innerHTML+='[3]<a href="{% static "code.py" %}" download="{% static "code.py" %}"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your third challenge file</button></a>'
+                            document.querySelector('.para-text').style="display: none;"
+                            document.querySelector('.para-form').style="display: none;"
+                            document.querySelector('.key-text').style="display: none;"
+                            document.querySelector('.key-form').style="display: none;"
+                        }
+                        else{
+                            alert('Sorry, the code submitted was incorrect. :(')
+                        }
+                    }
+                })
+            })
         }
     </script>
 </head>
 <div class="container">
     <div class="navbar">
         <div class="menu">
-            <h3 class="logo">Challenge</h3>
-            <div class="hamburger-menu">
+            <a class="navbar-brand text-uppercase" href="/techsprint" style="font-family: Montserrat, sans-serif;color: rgb(255,255,255); text-decoration: none;"><strong>TECH</strong><span style="color: rgb(0,252,25);"><strong><em>SPRINT</em></strong></span></a>
+            <div class="hamburger-menu" style="margin-right: 1rem;">
                 <div class="bar"></div>
             </div>
         </div>
@@ -62,9 +121,26 @@
         <div class="main">
             <header>
                 <div class="overlay">
-                    <div class="inner">
-                        <p>Hello guys! Congratulations on clearing the first challenge.Now we are going to give you a set of chellenges and hope you guys will complete it soon<br><br> The Following are the next challenges:<br><br> [1]<a href="static/secret.mp3"
-                                download="secret.mp3"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your first challenge file</button></a><br><br> [2]<a href="static/decrypt.txt" download="secret.txt"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your second challenge file</button></a><br><br><br>                            NOTE: Hints will be given on the hints page every 5 minutes.</p>
+                    <div class="inner" style="padding-bottom: 0;">
+                        <p>Hello guys! Congratulations on clearing the first challenge. Now we are going to give you a set of chellenges and hope you guys will complete it soon</p><br><br>
+                        <p>The Following are the next challenges:</p><br><br> 
+                        <p class="main-content">[1]<a href="{% static 'secret.mp3' %}" download="{% static 'secret.mp3' %}"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your first challenge file</button></a></p><br>
+                        <!--<p>[2]<a href="{% static 'decrypt.txt' %}" download="{% static 'secret.txt' %}"><button class="btn btn-indigo btn-lg" type="button" style="align-items: center">Download your second challenge file</button></a></p><br><br><br>-->
+                        <p class="verification-text">Enter the code to proceed</p>
+                        <form class="verification-form">
+                            <input type="number" class="ans-field"/>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                        <p class="para-text" style="display:none;">Enter the paragraph to proceed</p>
+                        <form class="para-form" style="display:none; margin-bottom: 0;">
+                            <input type="text" class="ans-field para-field"/>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
+                        <p class="key-text" style="display:none;">Enter the key to proceed</p>
+                        <form class="key-form" style="display:none; margin-bottom: 0;">
+                            <input type="text" class="ans-field key-field"/>
+                            <button type="submit" class="btn">Submit</button>
+                        </form>
                     </div>
                 </div>
             </header>
@@ -74,10 +150,9 @@
     </div>
     <div class="links">
         <ul>
-            <li><a href="/techsprint/decoding_challenge/home" style="--i: 0.1s;">Home</a></li>
-            <li><a href="/techsprint/decoding_challenge/hints" style="--i: 0.1s;">Hints</a></li>
-            <li><a href="/techsprint/decoding_challenge/acknowledgement" style="--i: 0.15s;">Acknowledgements</a></li>
-            <li><a href="/techsprint/decoding_challenge/scoreboard" style="--i: 0.15s;">Scoreboard</a></li>
+            <li><a href="/techsprint/treasurehunt_challenge/home" style="--i: 0.1s;">Home</a></li>
+            <li><a href="/techsprint/treasurehunt_challenge/hints" style="--i: 0.1s;">Hints</a></li>
+            <li><a href="/techsprint/treasurehunt_challenge/acknowledgement" style="--i: 0.15s;">Acknowledgements</a></li>
         </ul>
     </div>
 </div>
