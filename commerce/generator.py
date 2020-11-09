@@ -8,12 +8,12 @@ passes = ["DPS{1tz_R3D}", "DPS{Wh1T3_SuS}", "DPS{P1nk_V3nTed}", "DPS{1Tz_Gr3eN}"
 
 def generate(count):
     secret = passes[count%10] 
-    with open("commerce/static/code.txt", "w") as fp:
+    with open("staticfiles/code.txt", "w") as fp:
         fp.write(head_code)
     indent = 0
     word = list(secret)
     random.shuffle(word)
-    with open("commerce/static/code.txt", "a") as fp:
+    with open("staticfiles/code.txt", "a") as fp:
         for i in word:
             indents = "  " * indent
             fp.write(indents + f"if secret[{secret.index(i)}] == '{i}':")
