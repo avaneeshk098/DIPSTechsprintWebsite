@@ -11,16 +11,9 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 '''TO-DO:
     1. Complete the login
-    2. Complete sheets integration for challenges
+    2. Complete sheets integration
     3. Complete hints for the hints page
 '''
-scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
-
-creds = ServiceAccountCredentials.from_json_keyfile_name('/static/cred.json', scope)
-
-client = gspread.authorize(creds)
-
-sheet = client.open('Scoreboard').sheet1
 # Create your views here.
 def index(request):
     return render(request, "index1.html") 
@@ -68,7 +61,6 @@ def register(request):
         response.set_cookie("team_name", request.POST.get("name"))
         response.set_cookie("password", request.POST.get("pass"))
         response.set_cookie('team_id', len(sheet.get_all_records())+1)
-        sheet.insert_row([request.POST.get("name"), '', '', '', '', ''], len(sheet.get_all_records())+1)
     return response
 
 def image(request):
