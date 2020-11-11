@@ -9,6 +9,11 @@ import random, base64
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
+'''TO-DO:
+    1. Complete the login
+    2. Complete sheets integration for challenges
+    3. Complete hints for the hints page
+'''
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 
 creds = ServiceAccountCredentials.from_json_keyfile_name('commerce\cred.json', scope)
