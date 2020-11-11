@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dips-techsprint-404-scoreboard",
+  "private_key_id": "bf86dcfbe0cf1171d5cfa7e34d4e4390f833ed51",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCwffsa4w+9qCQh\nB/lY1uT+1cFqT4ZK6BLXeC8y/FEEtezXydcIV2/Zfa13LeHxs3aMuPBRq6Vzp0iR\nBBPMCgCRdh26LLNhBsXJ0PiPTd1GyJglaZRpRQucN4VfQjvkOZIz7b8eha/vKAgr\neoBjj2o/3TL0cPFWG+XnwPXAWERltPf7VXj7pG4Zhv6E1nb7grAc9KdU3NVw1a6o\nF/0vUjXUScmOZtyaaNtv+e7LtdwNOC2YKojZRLa6W/cJRWCnwPE4FeFhq2msUan+\notImh1Sxaw0Fq/dmEsHnGOPsUMMXDA80yI5H5RqfxRG/+fem6ahVLAkIPtRPQx7L\nQdaAKz8rAgMBAAECggEAAWFMSn7roWLSjVpPhF8U6teCgA84gP8JiJsqVPKtETYC\nvwLGyxp6mF3yWFqLLf50rsPxTGOr+RFp22NAfx5gYqZbJdscs027TzPkUh8jp8Ih\n53jXFQKJX1Dhh7ctmChcWRGQ++zWeAizyZP9LvvlDMcghTCLfh6tZLc357ETqz+x\njvm7pSK1WMvHd4cLfcJxef4y/SilsAV3W0PbTC0TIG/sqHax6KrLIZQo/V7+3zRc\nUn7V7oScTxUbhcDlu9oz6MipHijViz0vm0EzAZUrSjjwnyonq19B1z0CdQCD/7nZ\n/EpVpHzVH/6Zt/tw7G6hPHNWFbOugz1uSYzh0gAdEQKBgQDeczCrQDo725kVHEoV\nJiFD4n+SDq+/Eo8eH1Y2lWwsG2r6Yumr30TG2btiE6cSXRxOFLUMD23/nVYjyo3N\n5yma+cdgXx/6aKurVPiXAb80LpgFNtfOODRv/o3pvec7tYUMdkC9NBIG8JCIVNhU\n2RYOyp+iz2+SQ1RFix8MdiFv2wKBgQDLHFrQnCodZb8623nAMEaKwEt2kA9NX4WM\n2QptxFmYzxyYOq2sWHi5nzYBMM7J/rfD2em0sM/73LJgPhdOzypN/TESCvWPn9Rr\nQGwOEj0YHCK2WQmj0GNHSmPslf+3dRpdRHP/cHKbmgc/uLjaFf5uPBCO9lj62pbX\nK1RKZgZ28QKBgEGE/hXCoiRVRt5/6ZYXF/8trFNxvfPyXHML2dHT6vuGy9iZ36d+\n6HwFT3rQvQncoOSilrzJoqWCSwfZtjCqYIfEACRzgDC6Oa4KJfocSpvtCVunzqJv\nzYobGON6yqu8iEamYeUYfCLNIlT1YI6FLkkHB0PmAz+6Uwz0sB10gd63AoGBAJlG\np54AC6QtsXdIQ4Puqn1xCkHKC1I3gMA+1ijp4Td5LLoQphmGlmx2IroZTCSRjbpG\nC6DpQbtu3EnW8Z3upp0+MjbMgG3HjvT1I9Ymm2ZDbUqwvJ6b1x/omqnitJyMyb2S\nt/sPr92PCmNjElS5/kzQFSrd6147cVOlhjGy9rPxAoGBALV4UClHgGZ/h2oDbV0j\nr83K7Hcvy8urApPJshOGMGdD4Ltlgf9TZyPhfqd5VOgf+gnVNU0E0J/5exItp4hz\ny2g5Y/xtj4rtJI2UcJ1ItoniYsbS22yX3Eid8g1w4rKKjai0x8aehLNGqYcScXF5\ntKE0gunw8GWhAsIdsF6UUMXc\n-----END PRIVATE KEY-----\n",
+  "client_email": "dps-it-council@dips-techsprint-404-scoreboard.iam.gserviceaccount.com",
+  "client_id": "108734370775843636594",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dps-it-council%40dips-techsprint-404-scoreboard.iam.gserviceaccount.com"
+}
