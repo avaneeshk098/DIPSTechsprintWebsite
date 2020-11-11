@@ -70,70 +70,7 @@
                         </h1>
                         <p id="hint"></p>
                         <script>
-                            const timer = document.getElementById("timer");
-                            var minutes = 0; // how many minutes before reaching 0
-                            var seconds = 5; // how many seconds before reaching 0
-                            var hint_ctr = 0;
-                            const hint_section = document.getElementById("hint");
-                            const csrftoken = Cookies.get('csrftoken');
-                            function change_time() {
-                                var d = new Date(decodeURIComponent(document.cookie.split('"')[1]));
-                                var now = new Date();
-                                var diff = Math.round((now - d) / (60 * 1000));
-                                if (diff < 40 && hint_ctr != 3) {
-                                    $.ajax({
-                                        url: `/techsprint/treasurehunt_challenge/hints/${hint_ctr}`,
-                                        type: 'POST',
-                                        data: {
-                                            id: 0,
-                                            hint: "Hint 1"
-                                        },
-                                        headers: {'X-CSRFToken': csrftoken},
-                                        success: (hints) => {
-                                            if (hint_ctr == 3) {
-
-                                                return;
-                                            }
-                                            if (minutes == 0 && seconds == 0) {
-                                                minutes = 0; // resets minutes to initial state
-                                                seconds = 5; // resets seconds to initial state
-                                                timer.innerHTML = "HINTS IN :  " + "    " + minutes + " min " + seconds + " sec";
-                                                hint_section.innerHTML = hint_section.innerHTML + "<br><br><br>" + (hint_ctr + 1) + "]" + hints;
-                                                hint_ctr += 1;
-                                            } else if (seconds == 0) {
-                                                seconds = 59;
-                                                minutes -= 1;
-                                                timer.innerHTML = "HINTS IN:  " + "    " + minutes + " mins " + seconds + " sec";
-                                            } else {
-                                                seconds -= 1
-                                                timer.innerHTML = "HINTS IN:  " + "    " + minutes + " min " + seconds + " sec";
-                                            }
-                                        }
-                                    });
-                                } else if(hint_ctr != 3){
-                                    $.ajax({
-                                        url: `/techsprint/treasurehunt_challenge/hints/4`,
-                                        type: 'POST',
-                                        data: {
-                                            id: 0,
-                                            hint: "Hint 1"
-                                        },
-                                        headers: {'X-CSRFToken': csrftoken},
-                                        success: (hints) => {
-                                            if (hint_ctr == 3) {
-                                                return;
-                                            }
-                                            hints = hints.split(';');
-                                            timer.innerHTML = "ALL HINTS SHOWN.";
-                                            hint_section.innerHTML = hint_section.innerHTML + "<br><br><br>" + (hint_ctr + 1) + "]" + hints[hint_ctr];
-                                            hint_ctr += 1;
-                                        }
-                                    })
-                                }
-                                else{
-                                  return;
-                                }
-                            }
+                            function change_time(){}
                             setInterval(change_time, 1000);
                         </script>
                     </div>

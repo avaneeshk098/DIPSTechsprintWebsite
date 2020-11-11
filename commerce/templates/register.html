@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DPS IT COUNCIL</title>
+    {% csrf_token %}
     <link rel="stylesheet" href="{% static 'style.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" href="{% static 'ack.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
     <script type="text/javascript">
         window.onload = function() {
             document.addEventListener("contextmenu", function(e) {
@@ -46,38 +49,54 @@
                 e.preventDefault();
                 return false;
             }
+
+            const csrftoken = Cookies.get('csrftoken');
+            $('.register-form').submit((e) => {
+                e.preventDefault();
+                $.ajax({
+                    url: '/techsprint/treasurehuntrandomkey/register',
+                    type: 'POST',
+                    data: {
+                        name: $('#name').val(),
+                        pass: $('#pass').val()
+                    },
+                    headers: {'X-CSRFToken': csrftoken},
+                    success: ()=>{
+                        alert("Congratulations! You have been registered!")
+                        window.location.replace('/techsprint/treasurehuntrandomkey/image_challenge')
+                    },
+                    error: ()=>{
+                        alert("There has been some error! Contact us on discord immediately!")
+                    }
+                })
+            })
         }
     </script>
 </head>
 <div class="container">
     <div class="navbar">
-        <div class="menu">
+        <div class="menu" style="min-height: 4rem;">
             <a class="navbar-brand text-uppercase" href="/techsprint" style="font-family: Montserrat, sans-serif;color: rgb(255,255,255); text-decoration: none;"><strong>TECH</strong><span style="color: rgb(0,252,25);"><strong><em>SPRINT</em></strong></span></a>
-            <div class="hamburger-menu" style="margin-right: 1rem;">
-                <div class="bar"></div>
-            </div>
         </div>
     </div>
     <div class="main-container">
         <div class="main">
             <header>
                 <div class="overlay">
-                    <div class="inner"><img src="{% static 'download.jpg' %}">
-                        <h2 class="title">THANK YOU!</h2><br>
-                        <p>Organizer 1: Kushal Sai<br> Organizer 2: Amog Rao<br> Ideas and steganography: Amog Rao<br> Website Development: Avaneesh Kumar and Siddhant Joshi <br> -------------------------------------------- Teachers: Vasudha Maam - Computers Teacher<br>Principal and Vice Principal</p>
+                    <div class="inner">
+                        <h3 style="text-transform: uppercase; color: #f5f5f5;">Register for 404 imposter not found</h3>
+                        <form style="display: flex; flex-direction: column;" class="register-form">
+                            <input type="text"style="padding: 0.6rem 1rem; margin-top: 2rem;" id="name"/>
+                            <input type="password" style="padding: 0.6rem 1rem; margin-top: 2rem; margin-bottom: 2rem;" id="pass"/>
+                            <button type="submit" class="btn btn-lg">Register</button>
+                        </form>
+                        <p style="margin-top: 2rem;">Already registered? <a href="/techsprint/treasurehuntrandomkey/login">Login</a></p>
                     </div>
                 </div>
             </header>
         </div>
         <div class="shadow one"></div>
         <div class="shadow two"></div>
-    </div>
-    <div class="links">
-        <ul>
-            <li><a href="/techsprint/treasurehunt_challenge/home" style="--i: 0.1s;">Home</a></li>
-            <li><a href="/techsprint/treasurehunt_challenge/hints" style="--i: 0.1s;">Hints</a></li>
-            <li><a href="/techsprint/treasurehunt_challenge/challenge" style="--i: 0.05s;">Challenge</a></li>
-        </ul>
     </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
