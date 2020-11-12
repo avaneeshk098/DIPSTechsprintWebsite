@@ -145,6 +145,7 @@ def verify2(request):
             result = JsonResponse({'answer': True})
             sheet.update_cell(request.COOKIES['team_id'],5, '✔')
             sheet.update_cell(request.COOKIES['team_id'],6, '✔')
+            sheet.update_cell(request.COOKIES['team_id'],9, datetime.datetime.now().time())
         else:
             result = JsonResponse({'answer': False})
         return result
