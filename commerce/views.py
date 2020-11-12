@@ -20,8 +20,7 @@ client = gspread.authorize(creds)
 
 sheet = client.open('Scoreboard').sheet1
 '''TO-DO:
-    1. Complete the login
-    3. Complete hints for the hints page
+    1. Update sheet upon challenge completion
 '''
 # Create your views here.
 def index(request):

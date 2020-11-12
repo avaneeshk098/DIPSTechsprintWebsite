@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DPS IT COUNCIL</title>
+    {% csrf_token %}
     <link rel="stylesheet" href="{% static 'hints.css' %}">
     <link rel="stylesheet" href="{% static 'style.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
@@ -48,6 +49,25 @@
                 e.preventDefault();
                 return false;
             }
+            const csrftoken = Cookies.get('csrftoken');
+            var prev = 0
+            function get_hints(){
+                $.ajax({
+                    url: '/techsprint/treasurehunt_challenge/hints_post',
+                    type: 'POST',
+                    data: {
+                        random: 'Hello, World'
+                    },
+                    headers: {'X-CSRFToken': csrftoken},
+                    success: (result)=>{
+                        if(prev != result.hints.length){
+                            document.querySelector('#hint-section').innerHTML+=`<p>[${prev+1}] ${result.hints[prev]}</p>`
+                            prev+=1;
+                        }
+                    },
+                })
+            }
+            setInterval(get_hints, 60000);
         }
     </script>
 </head>
@@ -65,14 +85,7 @@
             <header>
                 <div class="overlay">
                     <div class="inner">
-                        <h1>
-                            <center id="timer"></center>
-                        </h1>
-                        <p id="hint"></p>
-                        <script>
-                            function change_time(){}
-                            setInterval(change_time, 1000);
-                        </script>
+                        <div id="hint-section"><h2>Hints</h2></div>
                     </div>
                 </div>
             </header>

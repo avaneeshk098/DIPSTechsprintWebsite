@@ -27,7 +27,7 @@ urlpatterns = [
     path('techsprint/treasurehunt_challenge/scoreboard', views.scoreboard),
     path('techsprint/treasurehunt_challenge/verify1', views.verify1),
     path('techsprint/treasurehunt_challenge/verify2', views.verify2),
-    path('techsprint/treasurehunt_challenge/hints/<int:id>', views.hints_post),
+    path('techsprint/treasurehunt_challenge/hints_post', views.hints_post),
     path('techsprint', views.techsprint, name='techsprint'),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps },name='django.contrib.sitemaps.views.sitemap'),
 ]
