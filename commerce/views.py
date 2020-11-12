@@ -73,8 +73,6 @@ def team(request):
 
 hint2 = ['What is DTMF???', 'Just google "Online DTMF decoder" and upload your audio file.', 'http://dialabc.com/sound/detect/index.html', ' There are many base encodings not just base64', 'Base32 encoding? What is that', 'You can decode it from this website: https://emn178.github.io/online-tools/base32_decode.html']
 hint1 = ['Did you know you could hide stuff inside images?', 'You can hide files inside images!', 'You can extract the image (open it with any extracting software like WinRAR or 7Zip)', 'There is a text file hidden with the name "error.txt" in the image.', 'Have you ever heard of base64.', 'You can decode base64 here https://www.base64decode.org/']
-passes = ["DPS{1tz_R3D}", "DPS{Wh1T3_SuS}", "DPS{P1nk_V3nTed}", "DPS{1Tz_Gr3eN}", "DPS{Blu3_SuS}", "DPS{y3LL0W}", "DPS{N0T_BlaCk}", "DPS{Br0Wn_V3nTed}", "DPS{CyAN_SUs}", "DPS{0RanG3}"]
-
 def register(request):
     response = render(request, 'register.html')
     if request.method == "POST":
