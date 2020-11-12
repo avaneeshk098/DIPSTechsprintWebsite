@@ -21,6 +21,7 @@ urlpatterns = [
     path('techsprint/treasurehuntrandomkey/image_challenge', views.image),
     path('techsprint/treasurehuntrandomkey/image_hints', views.image_hints),
     path('techsprint/treasurehunt_challenge/hints', views.hints),
+    path('techsprint/treasurehuntrandomkey/login', views.login),
     path('techsprint/treasurehunt_challenge/challenge', views.challenge),
     path('techsprint/treasurehunt_challenge/acknowledgement', views.acknowledge),
     path('techsprint/treasurehunt_challenge/scoreboard', views.scoreboard),

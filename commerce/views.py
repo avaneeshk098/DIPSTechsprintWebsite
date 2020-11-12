@@ -7,8 +7,18 @@ import datetime, time
 import http
 import random, base64
 import gspread
+import os
 from oauth2client.service_account import ServiceAccountCredentials
 
+DIRNAME = os.path.dirname(__file__)
+
+scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
+
+creds = ServiceAccountCredentials.from_json_keyfile_name(os.path.join(DIRNAME, 'cred.json'), scope)
+
+client = gspread.authorize(creds)
+
+sheet = client.open('Scoreboard').sheet1
 '''TO-DO:
     1. Complete the login
     2. Complete sheets integration
@@ -42,6 +52,12 @@ def generate():
 def gaming(request):
     return render(request, 'gaming.html')
 
+def login(request):
+    return render(request, 'login.html')
+
+def login_post(request):
+    response = render(request, 'login.html')
+
 def decoding(request):
     return render(request, 'decoding.html')
 
@@ -61,6 +77,7 @@ def register(request):
         response.set_cookie("team_name", request.POST.get("name"))
         response.set_cookie("password", request.POST.get("pass"))
         response.set_cookie('team_id', len(sheet.get_all_records())+1)
+        sheet.insert_row([request.POST.get("name"), '', '', '','',''], len(sheet.get_all_records())+1)
     return response
 
 def image(request):
