@@ -21,7 +21,6 @@ client = gspread.authorize(creds)
 sheet = client.open('Scoreboard').sheet1
 '''TO-DO:
     1. Complete the login
-    2. Complete sheets integration
     3. Complete hints for the hints page
 '''
 # Create your views here.
@@ -53,10 +52,16 @@ def gaming(request):
     return render(request, 'gaming.html')
 
 def login(request):
-    return render(request, 'login.html')
-
-def login_post(request):
     response = render(request, 'login.html')
+    if request.method == "POST":
+        print(request.POST.get('name'))
+        if request.POST.get('name') in sheet.col_values(1) and request.POST.get('pass') in sheet.col_values(7):
+            response.set_cookie("team_name", request.POST.get("name"))
+            response.set_cookie("password", request.POST.get("pass"))
+            response.set_cookie('team_id', sheet.col_values(1).index(request.POST.get('name'))+1)
+        else:
+            response = HttpResponse('Wrong team name/nickname/password!')
+    return response
 
 def decoding(request):
     return render(request, 'decoding.html')
@@ -77,7 +82,7 @@ def register(request):
         response.set_cookie("team_name", request.POST.get("name"))
         response.set_cookie("password", request.POST.get("pass"))
         response.set_cookie('team_id', len(sheet.get_all_records())+1)
-        sheet.insert_row([request.POST.get("name"), '', '', '','',''], len(sheet.get_all_records())+1)
+        sheet.insert_row([request.POST.get("name"), '', '', '','','', request.POST.get('pass')], len(sheet.get_all_records())+1)
     return response
 
 def image(request):

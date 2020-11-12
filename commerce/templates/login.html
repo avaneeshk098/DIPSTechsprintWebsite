@@ -54,16 +54,21 @@
             $('.register-form').submit((e) => {
                 e.preventDefault();
                 $.ajax({
-                    url: '/techsprint/treasurehuntrandomkey/register',
+                    url: '/techsprint/treasurehuntrandomkey/login',
                     type: 'POST',
                     data: {
                         name: $('#name').val(),
                         pass: $('#pass').val()
                     },
                     headers: {'X-CSRFToken': csrftoken},
-                    success: ()=>{
-                        alert("Congratulations! You have been registered!")
-                        window.location.replace('/techsprint/treasurehuntrandomkey/image_challenge')
+                    success: (result)=>{
+                        if(result != "Wrong team name/nickname/password!"){
+                            alert("Congratulations! You have been logged in!")
+                            window.location.replace('/techsprint/treasurehuntrandomkey/image_challenge')
+                        }
+                        else{
+                            alert("Wrong team name/nickname/password!")
+                        }
                     },
                     error: ()=>{
                         alert("There has been some error! Contact us on discord immediately!")
@@ -88,9 +93,9 @@
                         <form style="display: flex; flex-direction: column;" class="register-form">
                             <input type="text"style="padding: 0.6rem 1rem; margin-top: 2rem;" id="name" placeholder="Team Name/Nickname"/>
                             <input type="password" style="padding: 0.6rem 1rem; margin-top: 2rem; margin-bottom: 2rem;" id="pass" placeholder="Password"/>
-                            <button type="submit" class="btn btn-lg">Register</button>
+                            <button type="submit" class="btn btn-lg">Login</button>
                         </form>
-                        <p style="margin-top: 2rem;">Already registered? <a href="/techsprint/treasurehuntrandomkey/login">Login</a></p>
+                        <p style="margin-top: 2rem;">Not registered? <a style="color: grey;" href="/techsprint/treasurehuntrandomkey/register">Register</a></p>
                     </div>
                 </div>
             </header>
