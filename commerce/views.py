@@ -29,7 +29,7 @@ def index(request):
 random.seed(time.process_time())
 
 def generate():
-    passes = ["DPS{1tz_R3D}", "DPS{Wh1T3_SuS}", "DPS{P1nk_V3nTed}", "DPS{1Tz_Gr3eN}", "DPS{Blu3_SuS}", "DPS{y3LL0W}", "DPS{N0T_BlaCk}", "DPS{Br0Wn_V3nTed}", "DPS{CyAN_SUs}", "DPS{0RanG3}"]
+    passes = ["DPS{1tz_R3D}", "DPS{i1z_Wh1T3}", "DPS{Blu6_V3nTed}", "DPS{1Tz_Gr3eN}", "DPS{P1nk_Sus}", "DPS{y3Li0W}", "DPS{N0T_Br0W2}", "DPS{BlaCk_V3nTed}", "DPS{CyAN_SUs}", "DPS{0RanG3}"]
     count = 1
     for i in range(0,10):
         count = random.randint(0,9)
