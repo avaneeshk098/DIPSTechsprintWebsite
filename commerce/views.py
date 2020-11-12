@@ -28,7 +28,7 @@ def index(request):
 
 random.seed(time.process_time())
 
-passes = ["DPS{1tz_R3D}", "DPS{i1z_Wh1T3}", "DPS{Blu6_V3nTed}", "DPS{1Tz_Gr3eN}", "DPS{p1nk_Sus}", "DPS{y3Li0W}", "DPS{N0T_BroW2}", "DPS{BlaCk_V3nTed}", "DPS{CyAN_SUs}", "DPS{0RanG3}"]
+passes = ["DPS{1tz_R3d}", "DPS{itz_Wh1T3}", "DPS{Blu6_V3nTed}", "DPS{1Tz_Gr3eN}", "DPS{p1nk_6us}", "DPS{y3Li0W}", "DPS{N0T_BroW2}", "DPS{BlaCk_V3nTed}", "DPS{CyAN_sU6}", "DPS{0RanG3}"]
 def generate():
     count = 1
     for i in range(0,10):

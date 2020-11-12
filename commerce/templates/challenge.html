@@ -86,18 +86,17 @@
             })
 
             $("#clue").on('click', ()=>{
-                alert(`if word = "imposter" then 
-word[index] is "letter", i.e,
-word[0] is "i" 
-word[1] is "m" 
-word[2] is "p"
-word[3] is "o"
-word[4] is "s"
-word[5] is "t"
-word[6] is "e"
-word[7] is "r"
-Repeating indexes mean that the letters are repeating there.
-Once you figure out the answer run the python code. If you don't have python installed go to https://www.programiz.com/python-programming/online-compiler/ and paste the code and run it.`)
+                prompt(`
+Some examples of this reverse engineering logic are :-
+
+    P O T A T O
+    0 1 2 3 4 5
+
+    T R A N F O R M E R
+    0 1 2 3 4 5 6 7 8 9
+
+So the first letter always has the value 0, and the last letter has the value of [total number of letters in word - 1]
+Once you figure out the answer copy and paste the text encoded in the below link and run.`,'https://www.programiz.com/python-programming/online-compiler/')
             })
             $(".para-form").on('submit', (e) => {
                 e.preventDefault()
