@@ -28,8 +28,8 @@ def index(request):
 
 random.seed(time.process_time())
 
+passes = ["DPS{1tz_R3D}", "DPS{i1z_Wh1T3}", "DPS{Blu6_V3nTed}", "DPS{1Tz_Gr3eN}", "DPS{p1nk_Sus}", "DPS{y3Li0W}", "DPS{N0T_Br0W2}", "DPS{BlaCk_V3nTed}", "DPS{CyAN_SUs}", "DPS{0RanG3}"]
 def generate():
-    passes = ["DPS{1tz_R3D}", "DPS{i1z_Wh1T3}", "DPS{Blu6_V3nTed}", "DPS{1Tz_Gr3eN}", "DPS{p1nk_Sus}", "DPS{y3Li0W}", "DPS{N0T_Br0W2}", "DPS{BlaCk_V3nTed}", "DPS{CyAN_SUs}", "DPS{0RanG3}"]
     count = 1
     for i in range(0,10):
         count = random.randint(0,9)
@@ -79,7 +79,7 @@ def register(request):
         response.set_cookie("team_name", request.POST.get("name"))
         response.set_cookie("password", request.POST.get("pass"))
         response.set_cookie('team_id', len(sheet.get_all_records())+1)
-        sheet.insert_row([request.POST.get("name"), '', '', '','','', request.POST.get('pass')], len(sheet.get_all_records())+1)
+        sheet.insert_row([request.POST.get("name"), '', '', '','','', request.POST.get('pass'), request.POST.get('mail')], len(sheet.get_all_records())+1)
     return response
 
 def image(request):
@@ -132,6 +132,7 @@ def verify1(request):
         result = None
         if code == 287996:
             result = JsonResponse({'answer': True, 'code': code1})
+            sheet.update_cell(request.COOKIES['team_id'],4, '✔')
         else:
             result = JsonResponse({'answer': False, 'code': code1})
         return result
@@ -142,6 +143,8 @@ def verify2(request):
         result = None
         if para in passes:
             result = JsonResponse({'answer': True})
+            sheet.update_cell(request.COOKIES['team_id'],5, '✔')
+            sheet.update_cell(request.COOKIES['team_id'],6, '✔')
         else:
             result = JsonResponse({'answer': False})
         return result
@@ -149,6 +152,8 @@ def verify2(request):
 def decoding_index(request):
     #if (datetime.date(2020, 11,13) - datetime.date.today()).days <= 0:
     response = render(request, 'index.html')
+    sheet.update_cell(request.COOKIES['team_id'],2, '✔')
+    sheet.update_cell(request.COOKIES['team_id'],3, '✔')
         #response.set_cookie("arestedkjkhfdiiens", datetime.datetime.now())
     #else:
         #response = HttpResponse('This page is not accessible at the momment.')
