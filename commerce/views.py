@@ -71,7 +71,7 @@ def thinkathon(request):
 def team(request):
     return render(request, 'team.html')
 
-hint2 = ['What is DTMF???', 'Just google "Online DTMF decoder" and upload your audio file.', 'http://dialabc.com/sound/detect/index.html', ' There are many base encodings not just base64', 'Base32 encoding? What is that', 'You can decode it from this website: https://emn178.github.io/online-tools/base32_decode.html']
+hint2 = ['What is DTMF??? Try converting file to .wav. Use https://online-audio-converter.com/', 'Just google "Online DTMF decoder" and upload your audio file.', 'http://dialabc.com/sound/detect/index.html', ' There are many base encodings not just base64', 'Base32 encoding? What is that', 'You can decode it from this website: https://emn178.github.io/online-tools/base32_decode.html']
 hint1 = ['Did you know you could hide stuff inside images?', 'You can hide files inside images!', 'You can extract the image (open it with any extracting software like WinRAR or 7Zip)', 'There is a text file hidden with the name "error.txt" in the image.', 'Have you ever heard of base64.', 'You can decode base64 here https://www.base64decode.org/']
 def register(request):
     response = render(request, 'register.html')
