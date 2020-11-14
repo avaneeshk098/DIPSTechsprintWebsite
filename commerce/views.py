@@ -65,6 +65,7 @@ def login(request):
 def decoding(request):
     return render(request, 'decoding.html')
 
+blah 
 def thinkathon(request):
     return render(request, 'thinkathon.html')
 
@@ -81,9 +82,12 @@ def register(request):
         response.set_cookie('team_id', len(sheet.get_all_records())+1)
         sheet.insert_row([request.POST.get("name"), '', '', '','','', request.POST.get('pass'), request.POST.get('mail')], len(sheet.get_all_records())+1)
     return response
-blah
+
 def image(request):
-    return render(request, 'image.html')
+    if datetime.time(12,00,00) > datetime.datetime.now().time()
+        return HttpResponse('Challenge is over')
+    else:    
+        return render(request, 'image.html')
 
 def image_hints(request):
     if request.method == 'POST':
@@ -162,7 +166,10 @@ def decoding_index(request):
 
 def hints(request):
     #if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
-    response = render(request, 'hints.html')
+    if datetime.time(12,00,00) > datetime.datetime.now().time()
+        return HttpResponse('Challenge is over')
+    else:  
+        response = render(request, 'hints.html')
     #else:
         #response = HttpResponse('This page is not accessible at the momment.')
     return response
