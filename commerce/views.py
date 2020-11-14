@@ -81,7 +81,7 @@ def register(request):
         response.set_cookie('team_id', len(sheet.get_all_records())+1)
         sheet.insert_row([request.POST.get("name"), '', '', '','','', request.POST.get('pass'), request.POST.get('mail')], len(sheet.get_all_records())+1)
     return response
-
+blah
 def image(request):
     return render(request, 'image.html')
 
