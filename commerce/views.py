@@ -65,7 +65,6 @@ def login(request):
 def decoding(request):
     return render(request, 'decoding.html')
 
-blah 
 def thinkathon(request):
     return render(request, 'thinkathon.html')
 
@@ -84,10 +83,7 @@ def register(request):
     return response
 
 def image(request):
-    if datetime.time(12,00,00) > datetime.datetime.now().time()
-        return HttpResponse('Challenge is over')
-    else:    
-        return render(request, 'image.html')
+    return render(request, 'image.html')
 
 def image_hints(request):
     if request.method == 'POST':
@@ -166,10 +162,7 @@ def decoding_index(request):
 
 def hints(request):
     #if (datetime.date(2020, 11,13) - datetime.date.today()).days < 0:
-    if datetime.time(12,00,00) > datetime.datetime.now().time()
-        return HttpResponse('Challenge is over')
-    else:  
-        response = render(request, 'hints.html')
+    response = render(request, 'hints.html')
     #else:
         #response = HttpResponse('This page is not accessible at the momment.')
     return response
