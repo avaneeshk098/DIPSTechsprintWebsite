@@ -9,6 +9,7 @@ app_name = 'commerce'
 sitemaps = { 'sites': StaticViewSitemap }
 urlpatterns = [
     path('',index,name='index'),
+    path('members', views.members),
     path('homemail', views.homemail),
     path('submail', views.submail),
     path('techsprint/fps', views.gaming, name='gaming'),

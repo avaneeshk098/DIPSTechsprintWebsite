@@ -62,6 +62,9 @@ def login(request):
             response = HttpResponse('Wrong team name/nickname/password!')
     return response
 
+def members(request):
+    return render(request, 'members.html')
+    
 def decoding(request):
     return render(request, 'decoding.html')
 
